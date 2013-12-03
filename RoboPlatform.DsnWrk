@@ -2,3 +2,7 @@
 Version=1.0
 [Project1]
 ProjectPath=RoboStepper\RoboMotor.PrjPCB
+[Project2]
+ProjectPath=PlatformMisc.PrjPCB
+[Project3]
+ProjectPath=PlatformLibrary.LibPkg
