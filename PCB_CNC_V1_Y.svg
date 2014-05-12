@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="PCB_CNC_V1.svg">
+   sodipodi:docname="PCB_CNC_V1_Y.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="1330.7666"
-     inkscape:cy="434.74939"
+     inkscape:zoom="1"
+     inkscape:cx="1096.2551"
+     inkscape:cy="503.46672"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -47,10 +47,6 @@
      inkscape:object-paths="true"
      inkscape:snap-intersection-paths="true"
      inkscape:bbox-nodes="true">
-    <sodipodi:guide
-       orientation="1,0"
-       position="0,0"
-       id="guide3011" />
     <inkscape:grid
        type="xygrid"
        id="grid3013"
@@ -63,64 +59,24 @@
        spacingy="1mm" />
     <sodipodi:guide
        orientation="0,1"
-       position="265.74803,77.952756"
-       id="guide3015" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="141.78571,135.35714"
-       id="guide3785" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="407.48031,77.952756"
-       id="guide3789" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1093.0969,57.651695"
-       id="guide3832" />
+       position="1363.9116,-1.484375e-005"
+       id="guide3029" />
     <sodipodi:guide
        orientation="0,1"
-       position="1093.0969,339.91633"
-       id="guide3012" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1133.7893,424.80821"
-       id="guide3018" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1279.1562,433.1029"
-       id="guide3020" />
+       position="1340.2,425.03219"
+       id="guide3031" />
     <sodipodi:guide
        orientation="0,1"
-       position="1323.5,396.41"
-       id="guide5156" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1364.2,455.01"
-       id="guide5158" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1392.5,344.5"
-       id="guide5160" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="1453,396.42"
-       id="guide5162" />
+       position="1392.5,340.0038"
+       id="guide3033" />
     <sodipodi:guide
        orientation="0,1"
-       position="1323.5,311.81219"
-       id="guide3059" />
+       position="1133.8834,312.31861"
+       id="guide3037" />
     <sodipodi:guide
        orientation="1,0"
-       position="1219.0521,523.9999"
-       id="guide3105" />
-    <sodipodi:guide
-       orientation="0,1"
-       position="1336.0961,240.77044"
-       id="guide3161" />
-    <sodipodi:guide
-       orientation="0,1"
-       position="1335.8467,99.237145"
-       id="guide3163" />
+       position="1481.1,311.90966"
+       id="guide3092" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -211,7 +167,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccccc" />
     <path
-       style="fill:#aaaaff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35591999;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       style="fill:#55ddff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35591999000000002;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
        d="m 1481.2,1024.0126 -28.2,0 0,28.1 -60.4,0.2 -0.1,-28.3 -28.3,0 0,-70.88756 -28.478,-0.26542 0,-141.53329 28.478,0.0237 0,-70.8875 28.3,0 0,-28.10414 60.5,0 -0.1,28.09414 28.2,0 z"
        id="rect3227"
        inkscape:connector-curvature="0"
@@ -376,17 +332,59 @@
          sodipodi:type="arc" />
     </g>
     <path
-       style="fill:#aaaaff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35591999;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       style="fill:#55ddff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.35591999000000002;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
        d="m 1016.7893,1024.2543 28.2,0 0,28.1 60.4,0.2 0.1,-28.3 28.3,0 0,-70.88754 28.478,-0.26542 0,-141.53329 -28.478,0.0237 0,-70.8875 -28.3,0 0,-28.10414 -60.5,0 0.1,28.09414 -28.2,0 z"
        id="rect3227-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccc" />
     <rect
-       y="-351.51938"
-       x="407.65747"
+       y="485.43307"
+       x="1754.2028"
        height="566.92914"
        width="531.49603"
        id="rect3183"
        style="fill:#00ffcc;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       style="fill:#afe9c6;stroke:#ff0000;stroke-width:0.37002742;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3035"
+       width="230.15039"
+       height="339.84067"
+       x="1523.6902"
+       y="712.51367" />
+    <rect
+       style="fill:#80b3ff;stroke:#ff0000;stroke-width:0.43175092;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3039-7"
+       width="300.63687"
+       height="169.647"
+       x="1098.6298"
+       y="337.56995" />
+    <rect
+       style="fill:#2a7fff;stroke:#ff0000;stroke-width:0.34529173;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3039"
+       width="230.71974"
+       height="141.38699"
+       x="1133.2183"
+       y="196.15622" />
+    <rect
+       style="fill:#0066ff;stroke:#ff0000;stroke-width:0.30881822;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3039-1"
+       width="230.75621"
+       height="113.07701"
+       x="1133.2001"
+       y="82.752151" />
+    <rect
+       style="fill:#55ddff;stroke:#ff0000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3090"
+       width="117.16201"
+       height="169.81897"
+       x="1399.2666"
+       y="337.39798" />
+    <rect
+       style="fill:#55ddff;stroke:#ff0000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3090-4"
+       width="117.16201"
+       height="169.81897"
+       x="981.07471"
+       y="337.43668" />
   </g>
 </svg>
