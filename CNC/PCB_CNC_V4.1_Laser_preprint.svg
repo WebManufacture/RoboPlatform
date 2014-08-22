@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="4429.1338"
-   height="8858.2676"
+   width="2657.4802"
+   height="5314.9604"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.08838835"
-     inkscape:cx="3165.5768"
-     inkscape:cy="2034.7331"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="2147.7183"
+     inkscape:cy="2123.614"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -52,11 +52,7 @@
      height="355.6mm"
      borderlayer="false"
      inkscape:showpageshadow="false"
-     inkscape:snap-global="true">
-    <sodipodi:guide
-       orientation="0,1"
-       position="1964.3419,1366.0892"
-       id="guide4980" />
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid5160"
@@ -77,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,7 +81,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,7805.9048)">
+     transform="translate(0,4262.5975)">
     <g
        id="g10670-9"
        transform="matrix(0.99972358,0,0,0.81893708,-894.66577,155.65714)" />
@@ -301,7 +297,7 @@
     </g>
     <g
        id="g4947"
-       transform="matrix(0,-1,1,0,3354.7844,1079.3752)">
+       transform="matrix(0,-1,1,0,1603.2892,-685.56768)">
       <g
          id="g4621"
          transform="translate(50.387173,1547.9594)">
@@ -1244,7 +1240,7 @@
     </g>
     <g
        id="g6977-8"
-       transform="matrix(0,-1,1,0,284.38374,2633.4562)">
+       transform="translate(-680.38561,-2332.0671)">
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
@@ -1434,7 +1430,7 @@
     </g>
     <g
        id="g6977-8-2"
-       transform="matrix(0,1,-1,0,4378.2048,-3195.6104)">
+       transform="matrix(-1,0,0,-1,5146.5732,1778.508)">
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
@@ -3087,25 +3083,25 @@
     </g>
     <path
        style="fill:#ccffaa;fill-opacity:1;stroke:#000000;stroke-width:0.40031731;stroke-miterlimit:4;stroke-opacity:1"
-       d="m 3224.2309,-572.40314 0.2002,233.2253 -28.2579,0 0,256.6658 28.2579,0 -0.2002,242.5777 -85.0862,-0.3843 0,-28.2843 -315.8015,0 0,28.2843 -80.7789,0.3843 0.1772,-242.5777 28.2838,0 0,-256.6657 -28.6014,0 0.1404,-233.2254 166.344,0 0,27.8938 148.82,0 0,-27.8938 z"
+       d="m 1765.8166,-937.25889 -233.2253,0.2002 0,-28.2579 -256.6658,0 0,28.2579 -242.5777,-0.2002 0.3843,-85.08621 28.2843,0 0,-315.8015 -28.2843,0 -0.3843,-80.7789 242.5777,0.1772 0,28.2838 256.6657,0 0,-28.6014 233.2254,0.1404 0,166.344 -27.8938,0 0,148.82 27.8938,0 z"
        id="rect9679-5-2-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccc" />
     <path
        style="fill:#aaffcc;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1"
-       d="m 1942.1162,-714.51786 760.7531,0.01 0,52.96767 -28.2844,0 0,46.0789 -242.5776,-0.2102 0,28.2579 -256.6656,0 0,-28.2579 -205.3317,0.2002 0,-46.0789 -27.8938,0 z"
+       d="m 1031.3422,-1574.1883 760.7531,0.01 0,52.9676 -28.2844,0 0,46.0789 -242.5776,-0.2102 0,28.2579 -256.6656,0 0,-28.2579 -205.3317,0.2002 0,-46.0789 -27.8938,0 z"
        id="rect5501-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc" />
     <path
        style="fill:#aaffcc;fill-opacity:1;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1"
-       d="m 1901.6684,156.33088 760.7531,-0.019 0,-52.96769 -28.2844,0 0,-46.0789 -242.5775,-0.1585 0,-28.283801 -256.6657,0 -1.5,28.461001 -203.8317,0 0,46.0789 -27.8938,0 z"
+       d="m 1024.856,-777.05005 760.7531,-0.019 0,-52.96769 -28.2844,0 0,-46.07886 -242.5775,-0.1585 0,-28.2838 -256.6657,0 -1.5,28.461 -203.8317,0 0,46.07886 -27.8938,0 z"
        id="rect5501-7-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc" />
     <g
        id="g5619"
-       transform="translate(-218.7645,79.681239)">
+       transform="translate(-2840.7316,-1687.4606)">
       <g
          transform="translate(2870.34,-932.03958)"
          id="g3959">
@@ -4964,7 +4960,7 @@
     </g>
     <g
        id="g3282-41"
-       transform="translate(2084.0959,-187.65351)">
+       transform="translate(-975.12505,-1496.7594)">
       <g
          id="g3189-7-4-17-1"
          transform="translate(-869.73,520.41)">
@@ -5029,7 +5025,7 @@
     </g>
     <g
        id="g3254"
-       transform="translate(2675.0989,-495.53611)">
+       transform="translate(-1004.1994,-1803.9262)">
       <rect
          y="35.952564"
          x="1353.59"
@@ -5089,7 +5085,7 @@
          transform="matrix(-0.5765,0,0,0.81136,1575.0767,-681.67083)" />
     </g>
     <g
-       transform="translate(2521.9246,-495.53611)"
+       transform="translate(-1157.3737,-1803.9262)"
        id="g3254-4">
       <rect
          y="35.952564"
@@ -5150,7 +5146,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2367.1046,-495.53611)"
+       transform="translate(-1312.1937,-1803.9262)"
        id="g3254-4-5-7">
       <rect
          y="35.952564"
@@ -5700,7 +5696,7 @@
     </g>
     <g
        id="g3254-2-9"
-       transform="translate(2056.756,-494.82741)">
+       transform="translate(-532.72065,-1805.8744)">
       <rect
          y="35.952564"
          x="1353.59"
@@ -5760,7 +5756,7 @@
          transform="matrix(-0.5765,0,0,0.81136,1575.0767,-681.67083)" />
     </g>
     <g
-       transform="translate(2056.756,-342.00741)"
+       transform="translate(1110.1102,-1963.4951)"
        id="g3254-4-4-3-4">
       <rect
          y="35.952564"
@@ -5943,7 +5939,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(1903.936,-31.658609)"
+       transform="translate(-83.570969,-1799.2539)"
        id="g3254-4-4-53-3">
       <rect
          y="35.952564"
@@ -6005,7 +6001,7 @@
     </g>
     <g
        id="g3254-2-2-7"
-       transform="translate(2057.1104,-184.83301)">
+       transform="translate(1110.4646,-1806.3207)">
       <rect
          y="35.952564"
          x="1353.59"
@@ -6065,7 +6061,7 @@
          transform="matrix(-0.5765,0,0,0.81136,1575.0767,-681.67083)" />
     </g>
     <g
-       transform="translate(2057.1104,-32.013009)"
+       transform="translate(69.603431,-1799.6083)"
        id="g3254-4-4-3-9-3">
       <rect
          y="35.952564"
@@ -6248,7 +6244,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2212.2847,-31.658609)"
+       transform="translate(-244.96657,-1797.3128)"
        id="g3254-4-4-0-6-8">
       <rect
          y="35.952564"
@@ -6310,7 +6306,7 @@
     </g>
     <g
        id="g3254-2-9-5-9"
-       transform="translate(2365.459,-184.83301)">
+       transform="translate(328.99148,-1803.6638)">
       <rect
          y="35.952564"
          x="1353.59"
@@ -6370,7 +6366,7 @@
          transform="matrix(-0.5765,0,0,0.81136,1575.0767,-681.67083)" />
     </g>
     <g
-       transform="translate(2212.2847,-184.83301)"
+       transform="translate(795.89458,-1804.3795)"
        id="g3254-4-4-5-6-4-3">
       <rect
          y="35.952564"
@@ -6431,7 +6427,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2365.459,-32.013009)"
+       transform="translate(-248.00763,-1961.0003)"
        id="g3254-4-4-3-4-0-4">
       <rect
          y="35.952564"
@@ -6492,7 +6488,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2520.6333,-32.013009)"
+       transform="translate(-92.833332,-1961.0003)"
        id="g3254-4-4-53-3-2">
       <rect
          y="35.952564"
@@ -6554,7 +6550,7 @@
     </g>
     <g
        id="g3254-2-2-7-7"
-       transform="translate(2673.8077,-185.18741)">
+       transform="translate(637.34018,-1804.0182)">
       <rect
          y="35.952564"
          x="1353.59"
@@ -6614,7 +6610,7 @@
          transform="matrix(-0.5765,0,0,0.81136,1575.0767,-681.67083)" />
     </g>
     <g
-       transform="translate(2520.6333,-185.18741)"
+       transform="translate(484.16578,-1804.0182)"
        id="g3254-4-4-5-5-3-6">
       <rect
          y="35.952564"
@@ -6675,7 +6671,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2673.8077,-32.367409)"
+       transform="translate(60.341068,-1961.3547)"
        id="g3254-4-4-3-9-3-1">
       <rect
          y="35.952564"
@@ -6736,7 +6732,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2213.576,-342.00741)"
+       transform="translate(797.18588,-1961.5539)"
        id="g3254-4-4-0-6-8-6">
       <rect
          y="35.952564"
@@ -6797,7 +6793,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2366.7503,-342.36181)"
+       transform="translate(330.28278,-1961.1926)"
        id="g3254-4-4-3-4-0-4-2">
       <rect
          y="35.952564"
@@ -6858,7 +6854,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2521.9246,-342.36181)"
+       transform="translate(485.45708,-1961.1926)"
        id="g3254-4-4-53-3-2-1">
       <rect
          y="35.952564"
@@ -6919,7 +6915,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2675.099,-342.71621)"
+       transform="translate(638.63148,-1961.547)"
        id="g3254-4-4-3-9-3-1-2">
       <rect
          y="35.952564"
@@ -6980,7 +6976,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(1902.847,-340.9924)"
+       transform="translate(956.2012,-1962.4801)"
        id="g3254-4-4-0">
       <rect
          y="35.952564"
@@ -7041,7 +7037,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(1902.847,-494.1668)"
+       transform="translate(-686.62965,-1805.2138)"
        id="g3254-4-4-5-6">
       <rect
          y="35.952564"
@@ -7102,7 +7098,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(1903.2013,-184.1724)"
+       transform="translate(956.5555,-1805.6601)"
        id="g3254-4-4-5-5-3">
       <rect
          y="35.952564"
@@ -7163,7 +7159,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2521.9246,-655.91547)"
+       transform="translate(-1157.3737,-1964.3056)"
        id="g3254-4-4-0-6">
       <rect
          y="35.952564"
@@ -7224,7 +7220,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2675.0989,-656.26987)"
+       transform="translate(-1004.1994,-1964.66)"
        id="g3254-4-4-3-4-0">
       <rect
          y="35.952564"
@@ -7285,7 +7281,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2210.4801,-655.26337)"
+       transform="translate(-848.74085,-1964.3693)"
        id="g3254-4-4-53">
       <rect
          y="35.952564"
@@ -7346,7 +7342,7 @@
          transform="matrix(-0.49824046,0,0,0.70122384,1555.1111,-574.15812)" />
     </g>
     <g
-       transform="translate(2367.6544,-653.61777)"
+       transform="translate(-1311.6439,-1962.0079)"
        id="g3254-4-4-3-9">
       <rect
          y="35.952564"
@@ -7408,7 +7404,7 @@
     </g>
     <g
        id="g3282-41-1"
-       transform="translate(1771.7555,-346.11715)">
+       transform="translate(-817.72115,-1657.1642)">
       <g
          id="g3189-7-4-17-1-7"
          transform="translate(-869.73,520.41)">
@@ -7472,7 +7468,7 @@
          transform="matrix(0,-0.31303066,-0.44055948,0,1987.5454,-117.65964)" />
     </g>
     <g
-       transform="translate(2054.7642,-653.99975)"
+       transform="translate(-534.71245,-1965.0468)"
        id="g3254-4-5-7-5">
       <rect
          y="35.952564"
