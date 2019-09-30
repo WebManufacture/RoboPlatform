@@ -1,0 +1,373 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADC1_IRQHandler	..\include\interrupts.h	55;"	prototype	signature:(void)
+ADC2_IRQHandler	..\include\interrupts.h	54;"	prototype	signature:(void)
+AWU_IRQHandler	..\include\interrupts.h	18;"	prototype	signature:(void)
+CAN_RX_IRQHandler	..\include\interrupts.h	29;"	prototype	signature:(void)
+CAN_TX_IRQHandler	..\include\interrupts.h	30;"	prototype	signature:(void)
+CLK_IRQHandler	..\include\interrupts.h	19;"	prototype	signature:(void)
+CONFIGURATION_STRUCT	..\include\generalconfig.h	31;"	struct
+CONFIGURATION_STRUCT	..\include\generalconfig.h	39;"	struct
+CONSTS_MODULE	..\include\consts.h	5;"	macro
+CR1	..\include\gpio.h	10;"	member	struct:Port
+CR2	..\include\gpio.h	11;"	member	struct:Port
+CheckUart	..\include\uart.c	84;"	function	signature:(void)
+CheckUart	..\include\uart.h	27;"	prototype	signature:(void)
+ClearUart	..\include\uart.c	97;"	function	signature:(void)
+ClearUart	..\include\uart.h	29;"	prototype	signature:(void)
+ClockDivider	..\include\generalconfig.h	13;"	member	struct:DeviceSettings
+ClockSource	..\include\generalconfig.h	12;"	member	struct:DeviceSettings
+DDR	..\include\gpio.h	9;"	member	struct:Port
+DEFAULT_PACKET_SIZE	..\include\uart.h	14;"	macro
+DEF_16BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	20;"	macro
+DEF_16BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	25;"	macro
+DEF_16BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	20;"	macro
+DEF_16BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	25;"	macro
+DEF_8BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	19;"	macro
+DEF_8BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	24;"	macro
+DEF_8BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	19;"	macro
+DEF_8BIT_REG_AT	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	24;"	macro
+DebugFlag	..\include\generalconfig.h	48;"	member	struct:DeviceState
+Delay	..\include\utils.c	48;"	function	signature:(long waitCalc)
+Delay	..\include\utils.h	11;"	prototype	signature:(long waitCalc)
+DeviceAddr	..\include\xrouter.c	5;"	variable
+DeviceSettings	..\include\generalconfig.h	11;"	struct
+DeviceState	..\include\generalconfig.h	46;"	struct
+Digits	..\include\consts.h	7;"	struct
+EEPROM_EEC_IRQHandler	..\include\interrupts.h	56;"	prototype	signature:(void)
+ESubscribe	..\include\events.h	20;"	macro
+EVENTS_MODULE	..\include\events.h	14;"	macro
+EVT_AFTER_INIT	..\include\events.h	8;"	macro
+EVT_DEBUG	..\include\events.h	10;"	macro
+EVT_IDLE	..\include\events.h	9;"	macro
+EVT_INIT	..\include\events.h	7;"	macro
+EVT_INTERRUPT	..\include\events.h	11;"	macro
+EVT_INTERRUPT_EEPROM	..\include\interrupts.h	14;"	macro
+EVT_INTERRUPT_I2C	..\include\interrupts.h	8;"	macro
+EVT_INTERRUPT_TIM4_UO	..\include\interrupts.h	13;"	macro
+EVT_INTERRUPT_UART2_RX	..\include\interrupts.h	11;"	macro
+EVT_INTERRUPT_UART2_TX	..\include\interrupts.h	10;"	macro
+EVT_RESET	..\include\events.h	6;"	macro
+EXTI_PORTA_IRQHandler	..\include\interrupts.h	20;"	prototype	signature:(void)
+EXTI_PORTB_IRQHandler	..\include\interrupts.h	21;"	prototype	signature:(void)
+EXTI_PORTC_IRQHandler	..\include\interrupts.h	22;"	prototype	signature:(void)
+EXTI_PORTD_IRQHandler	..\include\interrupts.h	23;"	prototype	signature:(void)
+EXTI_PORTE_IRQHandler	..\include\interrupts.h	24;"	prototype	signature:(void)
+EXTI_PORTF_IRQHandler	..\include\interrupts.h	25;"	prototype	signature:(void)
+EXTI_PORTG_IRQHandler	..\include\interrupts.h	26;"	prototype	signature:(void)
+EXTI_PORTI_IRQHandler	..\include\interrupts.h	27;"	prototype	signature:(void)
+EventHandler	..\include\events.h	16;"	typedef
+EventSubscription	..\include\generalconfig.h	26;"	struct
+FactoryRecord	..\include\generalconfig.h	5;"	struct
+FireEvent	..\include\events.c	8;"	function	signature:(char event, char* data)
+FireEvent	..\include\events.h	22;"	prototype	signature:(char event, char* data)
+Flags	..\include\consts.h	18;"	struct
+GPIO_MODULE	..\include\gpio.h	4;"	macro
+GetUartData	..\include\uart.c	88;"	function	signature:(void)
+GetUartData	..\include\uart.h	28;"	prototype	signature:(void)
+GetUartMessage	..\include\uart.c	155;"	function	signature:(void)
+GetUartMessage	..\include\uart.h	41;"	prototype	signature:(void)
+I2C_IRQHandler	..\include\interrupts.h	45;"	prototype	signature:(void)
+INTERRUPT	..\include\interrupts.h	1;"	macro
+INTERRUPT_HANDLER	..\include\interrupts.h	2;"	macro
+INTERRUPT_HANDLER_TRAP	..\include\interrupts.c	15;"	function
+INTERRUPT_HANDLER_TRAP	..\include\interrupts.h	3;"	macro
+In	..\include\gpio.h	8;"	member	struct:Port
+InitUART	..\include\uart.c	67;"	function	signature:(struct UartConfiguration* cfg)
+InitUART	..\include\uart.h	26;"	prototype	signature:(struct UartConfiguration* config)
+InitUART_simple	..\include\uart.c	48;"	function	signature:(uint speed)
+InitUART_simple	..\include\uart.h	25;"	prototype	signature:(uint speed)
+InitXRouting	..\include\xrouter.c	46;"	function	signature:(void)
+InitXRouting	..\include\xrouter.h	2;"	prototype	signature:(void)
+LoadConfiguration	..\include\generalconfig.c	8;"	function	signature:(void)
+LoadConfiguration	..\include\generalconfig.h	60;"	prototype	signature:(void)
+MAX_EVENT_Subscriptions	..\include\generalconfig.h	1;"	macro
+MAX_KNOWN_DEVICES	deviceconfig.h	11;"	macro
+MAX_KNOWN_DEVICES	deviceconfig.h	4;"	macro
+MAX_MESSAGE_SIZE	deviceconfig.h	28;"	macro
+MAX_MODULES_COUNT	..\include\generalconfig.h	2;"	macro
+MESSAGE_QUEUE_LENGTH	deviceconfig.h	12;"	macro
+MESSAGE_QUEUE_LENGTH	deviceconfig.h	3;"	macro
+NULL	..\include\macro.h	26;"	macro
+NonHandledInterrupt	..\include\interrupts.h	6;"	prototype	signature:(void)
+NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
+Out	..\include\gpio.h	7;"	member	struct:Port
+PA_ODR	..\include\consts103f3.h	15;"	variable	typeref:struct:PA
+PA_ODR	..\include\consts103f3.h	20;"	variable	typeref:struct:PpA
+PA_ODR	..\include\consts105c6.h	10;"	variable	typeref:struct:PpA
+PA_ODR	..\include\consts105c6.h	5;"	variable	typeref:struct:PA
+PB_ODR	..\include\consts103f3.h	16;"	variable	typeref:struct:PB
+PB_ODR	..\include\consts103f3.h	21;"	variable	typeref:struct:PpB
+PB_ODR	..\include\consts105c6.h	11;"	variable	typeref:struct:PpB
+PB_ODR	..\include\consts105c6.h	6;"	variable	typeref:struct:PB
+PC_ODR	..\include\consts103f3.h	17;"	variable	typeref:struct:PC
+PC_ODR	..\include\consts103f3.h	22;"	variable	typeref:struct:PpC
+PC_ODR	..\include\consts105c6.h	12;"	variable	typeref:struct:PpC
+PC_ODR	..\include\consts105c6.h	7;"	variable	typeref:struct:PC
+PD_CR1_bit_C10	..\include\macro.h	41;"	macro
+PD_CR2_bit_C20	..\include\macro.h	42;"	macro
+PD_ODR	..\include\consts103f3.h	18;"	variable	typeref:struct:PD
+PD_ODR	..\include\consts103f3.h	23;"	variable	typeref:struct:PpD
+PD_ODR	..\include\consts105c6.h	13;"	variable	typeref:struct:PpD
+PD_ODR	..\include\consts105c6.h	8;"	variable	typeref:struct:PD
+PE_ODR	..\include\consts105c6.h	15;"	variable	typeref:struct:PE
+PE_ODR	..\include\consts105c6.h	17;"	variable	typeref:struct:PpE
+PG_ODR	..\include\consts105c6.h	16;"	variable	typeref:struct:PG
+PG_ODR	..\include\consts105c6.h	18;"	variable	typeref:struct:PpG
+Pins	..\include\gpio.h	14;"	struct
+Port	..\include\gpio.h	6;"	struct
+ProcessPacket	..\include\xrouter.c	33;"	function	signature:(char* data)
+ProcessPacket	..\include\xrouter.h	3;"	prototype	signature:(char* data)
+Reset	..\include\utils.c	55;"	function	signature:(void)
+Reset	..\include\utils.h	14;"	prototype	signature:(void)
+ResetFlag	..\include\generalconfig.h	47;"	member	struct:DeviceState
+RouterAddr	..\include\xrouter.c	6;"	variable
+SPI_IRQHandler	..\include\interrupts.h	32;"	prototype	signature:(void)
+STM8S103F	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	12;"	macro
+STM8S103F3P	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f3p.h	3;"	macro
+STM8S105C6	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c6.h	3;"	macro
+STM8S105C_S	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	12;"	macro
+SubscribeEvent	..\include\events.c	22;"	function	signature:(char event, EventHandler handler)
+SubscribeEvent	..\include\events.h	23;"	prototype	signature:(char event, EventHandler handler)
+TIM1_CAP_COM_IRQHandler	..\include\interrupts.h	34;"	prototype	signature:(void)
+TIM1_UPD_OVF_TRG_BRK_IRQHandler	..\include\interrupts.h	35;"	prototype	signature:(void)
+TIM2_CAP_COM_IRQHandler	..\include\interrupts.h	37;"	prototype	signature:(void)
+TIM2_UPD_OVF_BRK_IRQHandler	..\include\interrupts.h	36;"	prototype	signature:(void)
+TIM3_CAP_COM_IRQHandler	..\include\interrupts.h	39;"	prototype	signature:(void)
+TIM3_UPD_OVF_BRK_IRQHandler	..\include\interrupts.h	38;"	prototype	signature:(void)
+TIM4_CR1_bit_OPM	..\include\macro.h	40;"	macro
+TIM4_UPD_OVF_IRQHandler	..\include\interrupts.h	40;"	prototype	signature:(void)
+TIM5_CAP_COM_IRQHandler	..\include\interrupts.h	42;"	prototype	signature:(void)
+TIM5_UPD_OVF_BRK_TRG_IRQHandler	..\include\interrupts.h	41;"	prototype	signature:(void)
+TIM6_UPD_OVF_TRG_IRQHandler	..\include\interrupts.h	43;"	prototype	signature:(void)
+TIM_CCER1_bit_CCE1	..\include\macro.h	32;"	macro
+TIM_CCER1_bit_CCE2	..\include\macro.h	30;"	macro
+TIM_CCER1_bit_CCP1	..\include\macro.h	33;"	macro
+TIM_CCER1_bit_CCP2	..\include\macro.h	31;"	macro
+TIM_CCER2_bit_CCE3	..\include\macro.h	34;"	macro
+TIM_CCER2_bit_CCP3	..\include\macro.h	35;"	macro
+TIM_CCMR_bit_OCM1	..\include\macro.h	39;"	macro
+TIM_CCMR_bit_OCM2	..\include\macro.h	38;"	macro
+TIM_CCMR_bit_OCM4	..\include\macro.h	37;"	macro
+TIM_CCMR_bit_OCPE	..\include\macro.h	36;"	macro
+TIM_CR_bit_ARPE	..\include\macro.h	29;"	macro
+TIM_CR_bit_CEN	..\include\macro.h	28;"	macro
+TLI_IRQHandler	..\include\interrupts.h	17;"	prototype	signature:(void)
+TRAP_IRQHandler	..\include\interrupts.h	16;"	prototype	signature:(void)
+UART1_RX_IRQHandler	..\include\interrupts.h	48;"	prototype	signature:(void)
+UART1_TX_IRQHandler	..\include\interrupts.h	47;"	prototype	signature:(void)
+UART2_RX_IRQHandler	..\include\interrupts.h	49;"	prototype	signature:(void)
+UART2_TX_IRQHandler	..\include\interrupts.h	50;"	prototype	signature:(void)
+UART3_RX_IRQHandler	..\include\interrupts.h	51;"	prototype	signature:(void)
+UART3_TX_IRQHandler	..\include\interrupts.h	52;"	prototype	signature:(void)
+UART_BRR1	..\include\consts103f3.h	11;"	macro
+UART_BRR1	..\include\consts105c6.h	26;"	macro
+UART_BRR2	..\include\consts103f3.h	10;"	macro
+UART_BRR2	..\include\consts105c6.h	25;"	macro
+UART_CR1	..\include\consts103f3.h	5;"	macro
+UART_CR1	..\include\consts105c6.h	20;"	macro
+UART_CR2	..\include\consts103f3.h	6;"	macro
+UART_CR2	..\include\consts105c6.h	21;"	macro
+UART_CR3	..\include\consts103f3.h	7;"	macro
+UART_CR3	..\include\consts105c6.h	22;"	macro
+UART_CR4	..\include\consts103f3.h	8;"	macro
+UART_CR4	..\include\consts105c6.h	23;"	macro
+UART_CR5	..\include\consts103f3.h	9;"	macro
+UART_CR5	..\include\consts105c6.h	24;"	macro
+UART_DATABITS_7	..\include\uart.h	9;"	macro
+UART_DATABITS_8	..\include\uart.h	10;"	macro
+UART_DATABITS_9	..\include\uart.h	11;"	macro
+UART_DR	..\include\consts103f3.h	13;"	macro
+UART_DR	..\include\consts105c6.h	28;"	macro
+UART_EVEN_PARITY	..\include\uart.h	3;"	macro
+UART_NONE_PARITY	..\include\uart.h	1;"	macro
+UART_ODD_PARITY	..\include\uart.h	2;"	macro
+UART_PACKET_NO	..\include\uart.h	5;"	macro
+UART_PACKET_SIMPLE	..\include\uart.h	6;"	macro
+UART_PACKET_SIZED	..\include\uart.h	7;"	macro
+UART_PARITY_EN	..\include\consts105c6.h	29;"	macro
+UART_PARITY_ODD	..\include\consts105c6.h	30;"	macro
+UART_RX_IRQHandler	..\include\uart.c	280;"	function	signature:(void)
+UART_RX_IRQHandler	stm8_interrupt_vector.c	22;"	prototype	file:	signature:(void)
+UART_RX_handler	..\include\uart.c	182;"	function	signature:(void)
+UART_SR	..\include\consts103f3.h	12;"	macro
+UART_SR	..\include\consts105c6.h	27;"	macro
+UART_TX_IRQHandler	..\include\uart.c	284;"	function	signature:(void)
+UART_TX_IRQHandler	stm8_interrupt_vector.c	21;"	prototype	file:	signature:(void)
+UART_TX_handler	..\include\uart.c	228;"	function	signature:(void)
+USE_EVENTS	..\include\events.c	4;"	macro	file:
+USE_EVENTS	..\include\events.h	4;"	macro
+UTILS_MODULE	..\include\utils.h	5;"	macro
+UartConfiguration	..\include\uart.h	17;"	struct
+UartSend	..\include\uart.h	39;"	macro
+UartSendData	..\include\uart.c	107;"	function	signature:(char* data, uchar size)
+UartSendData	..\include\uart.h	30;"	prototype	signature:(char* data, unsigned char size )
+UartSendData	..\include\xrouter.c	8;"	prototype	file:	signature:(char* data, char size)
+UartSendMessage	..\include\uart.c	119;"	function	signature:(uchar da, uchar dt, uchar sa, uchar st, char* data, uchar size)
+UartSendMessage	..\include\uart.h	31;"	prototype	signature:(uchar da, uchar dt, uchar sa, uchar st, char* data, uchar size)
+UartSendMessageStruct	..\include\uart.c	138;"	function	signature:(struct Message* message)
+UartSendMessageStruct	..\include\uart.h	42;"	prototype	signature:(struct Message* message)
+UartSendPacket	main.c	10;"	function	signature:(void)
+UartSendSized	..\include\uart.c	146;"	function	signature:(struct Message* message, uchar size)
+UartSendSized	..\include\uart.h	43;"	prototype	signature:(struct Message* message, unsigned char size)
+UartState	..\include\uart.c	6;"	struct	file:
+UnblockEEPROM	..\include\utils.c	28;"	function	signature:(void)
+UnblockEEPROM	..\include\utils.h	12;"	prototype	signature:(void)
+UnblockFLASH	..\include\utils.c	38;"	function	signature:(void)
+UnblockFLASH	..\include\utils.h	13;"	prototype	signature:(void)
+WaitSend	..\include\uart.c	101;"	function	signature:(void)
+WorkingMode	..\include\generalconfig.h	14;"	member	struct:DeviceSettings
+__MODS0__	c:\program files\cosmic\cxstm8_16k\hstm8\mods0.h	11;"	macro
+__STM8S103F__	c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h	6;"	macro
+__STM8S105C_S__	c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h	6;"	macro
+__evt_idle_checkUartMessages	..\include\uart.c	164;"	function	signature:(char evt, char* data)
+__evt_idle_checkUartMessages	..\include\uart.c	20;"	prototype	file:	signature:(char evt, char* data)
+__evt_init_XRouting	..\include\xrouter.c	54;"	function	signature:(char event, char* data)
+__evt_init_XRouting	..\include\xrouter.h	1;"	prototype	signature:(char event, char* data)
+__evt_init_clock	..\include\utils.c	4;"	function	signature:(char event, char* data)
+__evt_init_clock	..\include\utils.h	7;"	prototype	signature:(char event, char* data)
+__evt_init_uart	..\include\uart.c	31;"	function	signature:(char evt, char* data)
+__evt_init_uart	..\include\uart.h	34;"	prototype	signature:(char evt, char* data)
+__evt_interrupt_uartFilter	..\include\uart.c	292;"	function	signature:(char evt, char* data)
+__evt_interrupt_uartFilter	..\include\uart.c	29;"	prototype	file:	signature:(char evt, char* data)
+_msg_routing_SendFactoryNum	..\include\xrouter.c	10;"	function	signature:(char* msg)
+_msg_routing_SetDeviceAddr	..\include\xrouter.c	23;"	function	signature:(char* msg)
+_stext	..\include\interrupts.h	5;"	prototype	signature:(void)
+_stext	stm8_interrupt_vector.c	20;"	prototype	file:
+_vectab	stm8_interrupt_vector.c	24;"	variable
+abs	..\include\utils.c	21;"	function	signature:(signed long x)
+abs	..\include\utils.h	10;"	prototype	signature:(signed long x)
+b0	..\include\consts.h	19;"	member	struct:Flags
+b1	..\include\consts.h	20;"	member	struct:Flags
+b2	..\include\consts.h	21;"	member	struct:Flags
+b3	..\include\consts.h	22;"	member	struct:Flags
+b4	..\include\consts.h	23;"	member	struct:Flags
+b5	..\include\consts.h	24;"	member	struct:Flags
+b6	..\include\consts.h	25;"	member	struct:Flags
+b7	..\include\consts.h	26;"	member	struct:Flags
+bit0	..\include\macro.h	1;"	macro
+bit1	..\include\macro.h	2;"	macro
+bit2	..\include\macro.h	3;"	macro
+bit3	..\include\macro.h	4;"	macro
+bit4	..\include\macro.h	5;"	macro
+bit5	..\include\macro.h	6;"	macro
+bit6	..\include\macro.h	7;"	macro
+bit7	..\include\macro.h	8;"	macro
+crcCode	..\include\uart.c	10;"	member	struct:UartState	file:
+dataBits	..\include\uart.h	21;"	member	struct:UartConfiguration
+ddr0	..\include\gpio.h	31;"	member	struct:Pins
+ddr1	..\include\gpio.h	32;"	member	struct:Pins
+ddr2	..\include\gpio.h	33;"	member	struct:Pins
+ddr3	..\include\gpio.h	34;"	member	struct:Pins
+ddr4	..\include\gpio.h	35;"	member	struct:Pins
+ddr5	..\include\gpio.h	36;"	member	struct:Pins
+ddr6	..\include\gpio.h	37;"	member	struct:Pins
+ddr7	..\include\gpio.h	38;"	member	struct:Pins
+deviceSettings	..\include\generalconfig.h	33;"	member	struct:CONFIGURATION_STRUCT	typeref:struct:CONFIGURATION_STRUCT::DeviceSettings
+deviceSettings	..\include\generalconfig.h	41;"	member	struct:CONFIGURATION_STRUCT	typeref:struct:CONFIGURATION_STRUCT::DeviceSettings
+deviceState	..\include\generalconfig.c	6;"	variable	typeref:struct:DeviceState
+dig1	..\include\consts.h	8;"	member	struct:Digits
+dig128	..\include\consts.h	15;"	member	struct:Digits
+dig16	..\include\consts.h	12;"	member	struct:Digits
+dig2	..\include\consts.h	9;"	member	struct:Digits
+dig32	..\include\consts.h	13;"	member	struct:Digits
+dig4	..\include\consts.h	10;"	member	struct:Digits
+dig64	..\include\consts.h	14;"	member	struct:Digits
+dig8	..\include\consts.h	11;"	member	struct:Digits
+esp0	..\include\gpio.h	47;"	member	struct:Pins
+esp1	..\include\gpio.h	48;"	member	struct:Pins
+esp2	..\include\gpio.h	49;"	member	struct:Pins
+esp3	..\include\gpio.h	50;"	member	struct:Pins
+esp4	..\include\gpio.h	51;"	member	struct:Pins
+esp5	..\include\gpio.h	52;"	member	struct:Pins
+esp6	..\include\gpio.h	53;"	member	struct:Pins
+esp7	..\include\gpio.h	54;"	member	struct:Pins
+eventNum	..\include\generalconfig.h	27;"	member	struct:EventSubscription
+events	..\include\events.c	6;"	variable
+events	..\include\generalconfig.h	35;"	member	struct:CONFIGURATION_STRUCT	typeref:struct:CONFIGURATION_STRUCT::EventSubscription
+factoryID	..\include\generalconfig.h	8;"	member	struct:FactoryRecord
+factoryRec	..\include\generalconfig.h	32;"	member	struct:CONFIGURATION_STRUCT	typeref:struct:CONFIGURATION_STRUCT::FactoryRecord
+factoryRec	..\include\generalconfig.h	40;"	member	struct:CONFIGURATION_STRUCT	typeref:struct:CONFIGURATION_STRUCT::FactoryRecord
+handler	..\include\generalconfig.h	28;"	member	struct:EventSubscription
+in0	..\include\gpio.h	23;"	member	struct:Pins
+in1	..\include\gpio.h	24;"	member	struct:Pins
+in2	..\include\gpio.h	25;"	member	struct:Pins
+in3	..\include\gpio.h	26;"	member	struct:Pins
+in4	..\include\gpio.h	27;"	member	struct:Pins
+in5	..\include\gpio.h	28;"	member	struct:Pins
+in6	..\include\gpio.h	29;"	member	struct:Pins
+in7	..\include\gpio.h	30;"	member	struct:Pins
+index	..\include\uart.c	9;"	member	struct:UartState	file:
+interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
+interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
+interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
+interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
+main	main.c	32;"	function
+maxEvents	..\include\events.h	1;"	macro
+messageBuf	..\include\uart.c	19;"	variable	typeref:struct:Message
+mode	main.c	7;"	variable
+moduleConfigs	..\include\generalconfig.h	34;"	member	struct:CONFIGURATION_STRUCT
+moduleConfigs	..\include\generalconfig.h	42;"	member	struct:CONFIGURATION_STRUCT
+out0	..\include\gpio.h	15;"	member	struct:Pins
+out1	..\include\gpio.h	16;"	member	struct:Pins
+out2	..\include\gpio.h	17;"	member	struct:Pins
+out3	..\include\gpio.h	18;"	member	struct:Pins
+out4	..\include\gpio.h	19;"	member	struct:Pins
+out5	..\include\gpio.h	20;"	member	struct:Pins
+out6	..\include\gpio.h	21;"	member	struct:Pins
+out7	..\include\gpio.h	22;"	member	struct:Pins
+packet	main.c	8;"	variable
+packetType	..\include\uart.h	22;"	member	struct:UartConfiguration
+parity	..\include\uart.h	19;"	member	struct:UartConfiguration
+phase	..\include\uart.c	7;"	member	struct:UartState	file:
+preInit	main.c	14;"	function	signature:(void)
+pup0	..\include\gpio.h	39;"	member	struct:Pins
+pup1	..\include\gpio.h	40;"	member	struct:Pins
+pup2	..\include\gpio.h	41;"	member	struct:Pins
+pup3	..\include\gpio.h	42;"	member	struct:Pins
+pup4	..\include\gpio.h	43;"	member	struct:Pins
+pup5	..\include\gpio.h	44;"	member	struct:Pins
+pup6	..\include\gpio.h	45;"	member	struct:Pins
+pup7	..\include\gpio.h	46;"	member	struct:Pins
+readADC	main.c	17;"	function	signature:(char channel)
+readDataBuf	..\include\uart.c	13;"	variable
+receiveBuf	..\include\uart.c	136;"	variable	typeref:struct:Message
+receiveBuffer	..\include\uart.c	17;"	variable
+receiveBuffer	..\include\uart.c	22;"	variable
+res	..\include\macro.h	45;"	macro
+reservedFlag2	..\include\generalconfig.h	49;"	member	struct:DeviceState
+reservedFlag3	..\include\generalconfig.h	50;"	member	struct:DeviceState
+reservedFlag4	..\include\generalconfig.h	51;"	member	struct:DeviceState
+reservedFlag5	..\include\generalconfig.h	52;"	member	struct:DeviceState
+reservedFlag6	..\include\generalconfig.h	53;"	member	struct:DeviceState
+reservedFlag7	..\include\generalconfig.h	54;"	member	struct:DeviceState
+schar	..\include\macro.h	19;"	macro
+sendBuffer	..\include\uart.c	18;"	variable
+sendBuffer	..\include\uart.c	23;"	variable
+set	..\include\macro.h	44;"	macro
+setting3	..\include\generalconfig.h	15;"	member	struct:DeviceSettings
+setting4	..\include\generalconfig.h	16;"	member	struct:DeviceSettings
+setting5	..\include\generalconfig.h	17;"	member	struct:DeviceSettings
+setting6	..\include\generalconfig.h	18;"	member	struct:DeviceSettings
+setting7	..\include\generalconfig.h	19;"	member	struct:DeviceSettings
+setting8	..\include\generalconfig.h	20;"	member	struct:DeviceSettings
+sign	..\include\utils.c	16;"	function	signature:(signed long x, signed long y)
+sign	..\include\utils.h	9;"	prototype	signature:(signed long x, signed long y)
+sint	..\include\macro.h	21;"	macro
+size	..\include\uart.c	8;"	member	struct:UartState	file:
+slong	..\include\macro.h	23;"	macro
+speed	..\include\uart.h	18;"	member	struct:UartConfiguration
+stopBits	..\include\uart.h	20;"	member	struct:UartConfiguration
+type	..\include\generalconfig.h	6;"	member	struct:FactoryRecord
+uchar	..\include\macro.h	20;"	macro
+uint	..\include\macro.h	22;"	macro
+ulong	..\include\macro.h	24;"	macro
+urState	..\include\uart.c	11;"	variable	typeref:struct:UartState
+uwState	..\include\uart.c	11;"	variable	typeref:struct:UartState
+ver	..\include\generalconfig.h	7;"	member	struct:FactoryRecord
+writeDataBuf	..\include\uart.c	13;"	variable
+x4000	..\include\generalconfig.h	58;"	variable	typeref:struct:DeviceConfig

@@ -1,0 +1,23 @@
+;	STMicroelectronics dependencies file
+
+[Version]
+Keyword=ST7Project
+Number=1.3
+
+[Root.Source Files...\include\generalconfig.c.Config.0]
+ExternDep= ..\include\generalconfig.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  DeviceConfig.h ..\include\GeneralConfig.h ..\include\utils.h  ..\include\Macro.h
+
+[Root.Source Files...\include\utils.c.Config.0]
+ExternDep= ..\include\utils.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h" DeviceConfig.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K4.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K.h"  ..\include\consts105K4.h ..\include\Consts.h ..\include\Utils.h
+
+[Root.Source Files...\include\uart.c.Config.0]
+ExternDep= ..\include\uart.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h" deviceConfig.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K4.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K.h"  ..\include\consts105K4.h ..\include\Consts.h ..\include\uart.h  ..\include\utils.h ..\include\generalConfig.h ..\include\events.h
+
+[Root.Source Files...\include\stm8s_it.c.Config.0]
+ExternDep= ..\include\stm8s_it.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h" DeviceConfig.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K4.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K.h"  ..\include\consts105K4.h ..\include\Consts.h ..\include\stm8s_it.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s.h ..\include\stm8s_conf.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_adc1.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_awu.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_beep.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_clk.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_exti.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_flash.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_gpio.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_i2c.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_itc.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_iwdg.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_rst.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_spi.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim1.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim2.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim3.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim4.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_uart2.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_wwdg.h
+
+[Root.Source Files.main.c.Config.0]
+ExternDep= main.c "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"  deviceConfig.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K4.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S105K.h"  ..\include\consts105K4.h ..\include\Consts.h ..\include\utils.h  ..\include\events.h ..\include\generalConfig.h
+
+[Root.Source Files.stm8_interrupt_vector.c.Config.0]
+ExternDep= stm8_interrupt_vector.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"  ..\include\stm8s_it.h ..\libs\STM8S_StdPeriph_driver\inc\stm8s.h  ..\include\stm8s_conf.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_adc1.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_awu.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_beep.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_clk.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_exti.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_flash.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_gpio.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_i2c.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_itc.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_iwdg.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_rst.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_spi.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim1.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim2.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim3.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_tim4.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_uart2.h  ..\libs\STM8S_StdPeriph_driver\inc\stm8s_wwdg.h

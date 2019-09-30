@@ -1,0 +1,962 @@
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 1  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+   1                         stm8/     
+   0  000000                                 #include "stm8s105c_s.inc"
+   1                         ; STM8S105C_S.inc
+   2                         
+   3                         ; Copyright (c) 2003-2010 STMicroelectronics
+   4                         
+   5  000000 U                               #ifdef   __STM8S105C_S__
+   8  000000                                 #define  __STM8S105C_S__ 1
+   9                         
+  10                         ; STM8S105C_S
+  11                         
+  12                         
+  13                         ; Port A
+  14                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  15                         
+  16  000000                                 EXTERN   PA_ODR.w      ; Port A data output latch 
+                                                                ;register
+  17                         
+  18  000000                                 EXTERN   PA_IDR.w      ; Port A input pin value 
+                                                                ;register
+  19                         
+  20  000000                                 EXTERN   PA_DDR.w      ; Port A data direction 
+                                                                ;register
+  21                         
+  22  000000                                 EXTERN   PA_CR1.w      ; Port A control register 1
+  23                         
+  24  000000                                 EXTERN   PA_CR2.w      ; Port A control register 2
+  25                         
+  26                         ; Port B
+  27                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  28                         
+  29  000000                                 EXTERN   PB_ODR.w      ; Port B data output latch 
+                                                                ;register
+  30                         
+  31  000000                                 EXTERN   PB_IDR.w      ; Port B input pin value 
+                                                                ;register
+  32                         
+  33  000000                                 EXTERN   PB_DDR.w      ; Port B data direction 
+                                                                ;register
+  34                         
+  35  000000                                 EXTERN   PB_CR1.w      ; Port B control register 1
+  36                         
+  37  000000                                 EXTERN   PB_CR2.w      ; Port B control register 2
+  38                         
+  39                         ; Port C
+  40                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  41                         
+  42  000000                                 EXTERN   PC_ODR.w      ; Port C data output latch 
+                                                                ;register
+  43                         
+  44  000000                                 EXTERN   PC_IDR.w      ; Port C input pin value 
+                                                                ;register
+  45                         
+  46  000000                                 EXTERN   PC_DDR.w      ; Port C data direction 
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 2  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+                                                                ;register
+  47                         
+  48  000000                                 EXTERN   PC_CR1.w      ; Port C control register 1
+  49                         
+  50  000000                                 EXTERN   PC_CR2.w      ; Port C control register 2
+  51                         
+  52                         ; Port D
+  53                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  54                         
+  55  000000                                 EXTERN   PD_ODR.w      ; Port D data output latch 
+                                                                ;register
+  56                         
+  57  000000                                 EXTERN   PD_IDR.w      ; Port D input pin value 
+                                                                ;register
+  58                         
+  59  000000                                 EXTERN   PD_DDR.w      ; Port D data direction 
+                                                                ;register
+  60                         
+  61  000000                                 EXTERN   PD_CR1.w      ; Port D control register 1
+  62                         
+  63  000000                                 EXTERN   PD_CR2.w      ; Port D control register 2
+  64                         
+  65                         ; Port E
+  66                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  67                         
+  68  000000                                 EXTERN   PE_ODR.w      ; Port E data output latch 
+                                                                ;register
+  69                         
+  70  000000                                 EXTERN   PE_IDR.w      ; Port E input pin value 
+                                                                ;register
+  71                         
+  72  000000                                 EXTERN   PE_DDR.w      ; Port E data direction 
+                                                                ;register
+  73                         
+  74  000000                                 EXTERN   PE_CR1.w      ; Port E control register 1
+  75                         
+  76  000000                                 EXTERN   PE_CR2.w      ; Port E control register 2
+  77                         
+  78                         ; Port G
+  79                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  80                         
+  81  000000                                 EXTERN   PG_ODR.w      ; Port G data output latch 
+                                                                ;register
+  82                         
+  83  000000                                 EXTERN   PG_IDR.w      ; Port G input pin value 
+                                                                ;register
+  84                         
+  85  000000                                 EXTERN   PG_DDR.w      ; Port G data direction 
+                                                                ;register
+  86                         
+  87  000000                                 EXTERN   PG_CR1.w      ; Port G control register 1
+  88                         
+  89  000000                                 EXTERN   PG_CR2.w      ; Port G control register 2
+  90                         
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 3  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+  91                         ; Flash
+  92                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+  93                         
+  94  000000                                 EXTERN   FLASH_CR1.w   ; Flash control register 1
+  95                         
+  96  000000                                 EXTERN   FLASH_CR2.w   ; Flash control register 2
+  97                         
+  98  000000                                 EXTERN   FLASH_NCR2.w  ; Flash complementary control 
+                                                                ;register 2
+  99                         
+ 100  000000                                 EXTERN   FLASH_FPR.w   ; Flash protection register
+ 101                         
+ 102  000000                                 EXTERN   FLASH_NFPR.w  ; Flash complementary protection
+                                                                ; register
+ 103                         
+ 104  000000                                 EXTERN   FLASH_IAPSR.w  ; Flash in-application 
+                                                                ;programming status register
+ 105                         
+ 106  000000                                 EXTERN   FLASH_PUKR.w  ; Flash Program memory 
+                                                                ;unprotection register
+ 107                         
+ 108  000000                                 EXTERN   FLASH_DUKR.w  ; Data EEPROM unprotection 
+                                                                ;register
+ 109                         
+ 110                         ; External Interrupt Control Register (ITC)
+ 111                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 112                         
+ 113  000000                                 EXTERN   EXTI_CR1.w    ; External interrupt control 
+                                                                ;register 1
+ 114                         
+ 115  000000                                 EXTERN   EXTI_CR2.w    ; External interrupt control 
+                                                                ;register 2
+ 116                         
+ 117                         ; Reset (RST)
+ 118                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 119                         
+ 120  000000                                 EXTERN   RST_SR.w      ; Reset status register 1
+ 121                         
+ 122                         ; Clock Control (CLK)
+ 123                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 124                         
+ 125  000000                                 EXTERN   CLK_ICKR.w    ; Internal clock control 
+                                                                ;register
+ 126                         
+ 127  000000                                 EXTERN   CLK_ECKR.w    ; External clock control 
+                                                                ;register
+ 128                         
+ 129  000000                                 EXTERN   CLK_CMSR.w    ; Clock master status register
+ 130                         
+ 131  000000                                 EXTERN   CLK_SWR.w     ; Clock master switch register
+ 132                         
+ 133  000000                                 EXTERN   CLK_SWCR.w    ; Clock switch control register
+ 134                         
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 4  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 135  000000                                 EXTERN   CLK_CKDIVR.w  ; Clock divider register
+ 136                         
+ 137  000000                                 EXTERN   CLK_PCKENR1.w  ; Peripheral clock gating 
+                                                                ;register 1
+ 138                         
+ 139  000000                                 EXTERN   CLK_CSSR.w    ; Clock security system 
+                                                                ;register
+ 140                         
+ 141  000000                                 EXTERN   CLK_CCOR.w    ; Configurable clock control 
+                                                                ;register
+ 142                         
+ 143  000000                                 EXTERN   CLK_PCKENR2.w  ; Peripheral clock gating 
+                                                                ;register 2
+ 144                         
+ 145  000000                                 EXTERN   CLK_CANCCR.w  ; CAN clock control register
+ 146                         
+ 147  000000                                 EXTERN   CLK_HSITRIMR.w  ; HSI clock calibration trimming
+                                                                ; register
+ 148                         
+ 149  000000                                 EXTERN   CLK_SWIMCCR.w  ; SWIM clock control register
+ 150                         
+ 151                         ; Window Watchdog (WWDG)
+ 152                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 153                         
+ 154  000000                                 EXTERN   WWDG_CR.w     ; WWDG Control Register
+ 155                         
+ 156  000000                                 EXTERN   WWDG_WR.w     ; WWDR Window Register
+ 157                         
+ 158                         ; Independent Watchdog (IWDG)
+ 159                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 160                         
+ 161  000000                                 EXTERN   IWDG_KR.w     ; IWDG Key Register
+ 162                         
+ 163  000000                                 EXTERN   IWDG_PR.w     ; IWDG Prescaler Register
+ 164                         
+ 165  000000                                 EXTERN   IWDG_RLR.w    ; IWDG Reload Register
+ 166                         
+ 167                         ; Auto Wake-Up (AWU)
+ 168                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 169                         
+ 170  000000                                 EXTERN   AWU_CSR.w     ; AWU Control/Status Register
+ 171                         
+ 172  000000                                 EXTERN   AWU_APR.w     ; AWU asynchronous prescaler 
+                                                                ;buffer register
+ 173                         
+ 174  000000                                 EXTERN   AWU_TBR.w     ; AWU Timebase selection 
+                                                                ;register
+ 175                         
+ 176                         ; Beeper (BEEP)
+ 177                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 178                         
+ 179  000000                                 EXTERN   BEEP_CSR.w    ; BEEP Control/Status Register
+ 180                         
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 5  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 181                         ; Serial Peripheral Interface (SPI)
+ 182                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 183                         
+ 184  000000                                 EXTERN   SPI_CR1.w     ; SPI Control Register 1
+ 185                         
+ 186  000000                                 EXTERN   SPI_CR2.w     ; SPI Control Register 2
+ 187                         
+ 188  000000                                 EXTERN   SPI_ICR.w     ; SPI Interrupt Control 
+                                                                ;Register
+ 189                         
+ 190  000000                                 EXTERN   SPI_SR.w      ; SPI Status Register
+ 191                         
+ 192  000000                                 EXTERN   SPI_DR.w      ; SPI Data Register
+ 193                         
+ 194  000000                                 EXTERN   SPI_CRCPR.w   ; SPI CRC Polynomial Register
+ 195                         
+ 196  000000                                 EXTERN   SPI_RXCRCR.w  ; SPI Rx CRC Register
+ 197                         
+ 198  000000                                 EXTERN   SPI_TXCRCR.w  ; SPI Tx CRC Register
+ 199                         
+ 200                         ; I2C Bus Interface (I2C)
+ 201                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 202                         
+ 203  000000                                 EXTERN   I2C_CR1.w     ; I2C control register 1
+ 204                         
+ 205  000000                                 EXTERN   I2C_CR2.w     ; I2C control register 2
+ 206                         
+ 207  000000                                 EXTERN   I2C_FREQR.w   ; I2C frequency register
+ 208                         
+ 209  000000                                 EXTERN   I2C_OARL.w    ; I2C Own address register low
+ 210                         
+ 211  000000                                 EXTERN   I2C_OARH.w    ; I2C Own address register high
+ 212                         
+ 213  000000                                 EXTERN   I2C_DR.w      ; I2C data register
+ 214                         
+ 215  000000                                 EXTERN   I2C_SR1.w     ; I2C status register 1
+ 216                         
+ 217  000000                                 EXTERN   I2C_SR2.w     ; I2C status register 2
+ 218                         
+ 219  000000                                 EXTERN   I2C_SR3.w     ; I2C status register 3
+ 220                         
+ 221  000000                                 EXTERN   I2C_ITR.w     ; I2C interrupt control 
+                                                                ;register
+ 222                         
+ 223  000000                                 EXTERN   I2C_CCRL.w    ; I2C Clock control register 
+                                                                ;low
+ 224                         
+ 225  000000                                 EXTERN   I2C_CCRH.w    ; I2C Clock control register 
+                                                                ;high
+ 226                         
+ 227  000000                                 EXTERN   I2C_TRISER.w  ; I2C TRISE register
+ 228                         
+ 229  000000                                 EXTERN   I2C_PECR.w    ; I2C packet error checking 
+                                                                ;register
+ 230                         
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 6  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 231                         ; LIN Universal asynch. receiver transmitter (UART2)
+ 232                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 233                         
+ 234  000000                                 EXTERN   UART2_SR.w    ; UART2 Status Register
+ 235                         
+ 236  000000                                 EXTERN   UART2_DR.w    ; UART2 Data Register
+ 237                         
+ 238  000000                                 EXTERN   UART2_BRR1.w  ; UART2 Baud Rate Register 1
+ 239                         
+ 240  000000                                 EXTERN   UART2_BRR2.w  ; UART2 Baud Rate Register 2
+ 241                         
+ 242  000000                                 EXTERN   UART2_CR1.w   ; UART2 Control Register 1
+ 243                         
+ 244  000000                                 EXTERN   UART2_CR2.w   ; UART2 Control Register 2
+ 245                         
+ 246  000000                                 EXTERN   UART2_CR3.w   ; UART2 Control Register 3
+ 247                         
+ 248  000000                                 EXTERN   UART2_CR4.w   ; UART2 Control Register 4
+ 249                         
+ 250  000000                                 EXTERN   UART2_CR6.w   ; UART2 Control Register 6
+ 251                         
+ 252  000000                                 EXTERN   UART2_GTR.w   ; UART2 Guard time Register
+ 253                         
+ 254  000000                                 EXTERN   UART2_PSCR.w  ; UART2 Prescaler Register
+ 255                         
+ 256                         ; 16-Bit Timer 1 (TIM1)
+ 257                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 258                         
+ 259  000000                                 EXTERN   TIM1_CR1.w    ; TIM1 Control register 1
+ 260                         
+ 261  000000                                 EXTERN   TIM1_CR2.w    ; TIM1 Control register 2
+ 262                         
+ 263  000000                                 EXTERN   TIM1_SMCR.w   ; TIM1 Slave Mode Control 
+                                                                ;register
+ 264                         
+ 265  000000                                 EXTERN   TIM1_ETR.w    ; TIM1 external trigger 
+                                                                ;register
+ 266                         
+ 267  000000                                 EXTERN   TIM1_IER.w    ; TIM1 Interrupt enable 
+                                                                ;register
+ 268                         
+ 269  000000                                 EXTERN   TIM1_SR1.w    ; TIM1 Status register 1
+ 270                         
+ 271  000000                                 EXTERN   TIM1_SR2.w    ; TIM1 Status register 2
+ 272                         
+ 273  000000                                 EXTERN   TIM1_EGR.w    ; TIM1 Event Generation 
+                                                                ;register
+ 274                         
+ 275  000000                                 EXTERN   TIM1_CCMR1.w  ; TIM1 Capture/Compare mode 
+                                                                ;register 1
+ 276                         
+ 277  000000                                 EXTERN   TIM1_CCMR2.w  ; TIM1 Capture/Compare mode 
+                                                                ;register 2
+ 278                         
+ 279  000000                                 EXTERN   TIM1_CCMR3.w  ; TIM1 Capture/Compare mode 
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 7  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+                                                                ;register 3
+ 280                         
+ 281  000000                                 EXTERN   TIM1_CCMR4.w  ; TIM1 Capture/Compare mode 
+                                                                ;register 4
+ 282                         
+ 283  000000                                 EXTERN   TIM1_CCER1.w  ; TIM1 Capture/Compare enable 
+                                                                ;register 1
+ 284                         
+ 285  000000                                 EXTERN   TIM1_CCER2.w  ; TIM1 Capture/Compare enable 
+                                                                ;register 2
+ 286                         
+ 287  000000                                 EXTERN   TIM1_CNTRH.w  ; Data bits High
+ 288                         
+ 289  000000                                 EXTERN   TIM1_CNTRL.w  ; Data bits Low
+ 290                         
+ 291  000000                                 EXTERN   TIM1_PSCRH.w  ; Data bits High
+ 292                         
+ 293  000000                                 EXTERN   TIM1_PSCRL.w  ; Data bits Low
+ 294                         
+ 295  000000                                 EXTERN   TIM1_ARRH.w   ; Data bits High
+ 296                         
+ 297  000000                                 EXTERN   TIM1_ARRL.w   ; Data bits Low
+ 298                         
+ 299  000000                                 EXTERN   TIM1_RCR.w    ; TIM1 Repetition counter 
+                                                                ;register
+ 300                         
+ 301  000000                                 EXTERN   TIM1_CCR1H.w  ; Data bits High
+ 302                         
+ 303  000000                                 EXTERN   TIM1_CCR1L.w  ; Data bits Low
+ 304                         
+ 305  000000                                 EXTERN   TIM1_CCR2H.w  ; Data bits High
+ 306                         
+ 307  000000                                 EXTERN   TIM1_CCR2L.w  ; Data bits Low
+ 308                         
+ 309  000000                                 EXTERN   TIM1_CCR3H.w  ; Data bits High
+ 310                         
+ 311  000000                                 EXTERN   TIM1_CCR3L.w  ; Data bits Low
+ 312                         
+ 313  000000                                 EXTERN   TIM1_CCR4H.w  ; Data bits High
+ 314                         
+ 315  000000                                 EXTERN   TIM1_CCR4L.w  ; Data bits Low
+ 316                         
+ 317  000000                                 EXTERN   TIM1_BKR.w    ; TIM1 Break register
+ 318                         
+ 319  000000                                 EXTERN   TIM1_DTR.w    ; TIM1 Dead-time register
+ 320                         
+ 321  000000                                 EXTERN   TIM1_OISR.w   ; TIM1 Output idle state 
+                                                                ;register
+ 322                         
+ 323                         ; 16-Bit Timer 2 (TIM2)
+ 324                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 325                         
+ 326  000000                                 EXTERN   TIM2_CR1.w    ; TIM2 Control register 1
+ 327                         
+ 328  000000                                 EXTERN   TIM2_IER.w    ; TIM2 Interrupt enable 
+                                                                ;register
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 8  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 329                         
+ 330  000000                                 EXTERN   TIM2_SR1.w    ; TIM2 Status register 1
+ 331                         
+ 332  000000                                 EXTERN   TIM2_SR2.w    ; TIM2 Status register 2
+ 333                         
+ 334  000000                                 EXTERN   TIM2_EGR.w    ; TIM2 Event Generation 
+                                                                ;register
+ 335                         
+ 336  000000                                 EXTERN   TIM2_CCMR1.w  ; TIM2 Capture/Compare mode 
+                                                                ;register 1
+ 337                         
+ 338  000000                                 EXTERN   TIM2_CCMR2.w  ; TIM2 Capture/Compare mode 
+                                                                ;register 2
+ 339                         
+ 340  000000                                 EXTERN   TIM2_CCMR3.w  ; TIM2 Capture/Compare mode 
+                                                                ;register 3
+ 341                         
+ 342  000000                                 EXTERN   TIM2_CCER1.w  ; TIM2 Capture/Compare enable 
+                                                                ;register 1
+ 343                         
+ 344  000000                                 EXTERN   TIM2_CCER2.w  ; TIM2 Capture/Compare enable 
+                                                                ;register 2
+ 345                         
+ 346  000000                                 EXTERN   TIM2_CNTRH.w  ; Data bits High
+ 347                         
+ 348  000000                                 EXTERN   TIM2_CNTRL.w  ; Data bits Low
+ 349                         
+ 350  000000                                 EXTERN   TIM2_PSCR.w   ; TIM2 Prescaler register
+ 351                         
+ 352  000000                                 EXTERN   TIM2_ARRH.w   ; Data bits High
+ 353                         
+ 354  000000                                 EXTERN   TIM2_ARRL.w   ; Data bits Low
+ 355                         
+ 356  000000                                 EXTERN   TIM2_CCR1H.w  ; Data bits High
+ 357                         
+ 358  000000                                 EXTERN   TIM2_CCR1L.w  ; Data bits Low
+ 359                         
+ 360  000000                                 EXTERN   TIM2_CCR2H.w  ; Data bits High
+ 361                         
+ 362  000000                                 EXTERN   TIM2_CCR2L.w  ; Data bits Low
+ 363                         
+ 364  000000                                 EXTERN   TIM2_CCR3H.w  ; Data bits High
+ 365                         
+ 366  000000                                 EXTERN   TIM2_CCR3L.w  ; Data bits Low
+ 367                         
+ 368                         ; 16-Bit Timer 3 (TIM3)
+ 369                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 370                         
+ 371  000000                                 EXTERN   TIM3_CR1.w    ; TIM3 Control register 1
+ 372                         
+ 373  000000                                 EXTERN   TIM3_IER.w    ; TIM3 Interrupt enable 
+                                                                ;register
+ 374                         
+ 375  000000                                 EXTERN   TIM3_SR1.w    ; TIM3 Status register 1
+ 376                         
+ 377  000000                                 EXTERN   TIM3_SR2.w    ; TIM3 Status register 2
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 9  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 378                         
+ 379  000000                                 EXTERN   TIM3_EGR.w    ; TIM3 Event Generation 
+                                                                ;register
+ 380                         
+ 381  000000                                 EXTERN   TIM3_CCMR1.w  ; TIM3 Capture/Compare mode 
+                                                                ;register 1
+ 382                         
+ 383  000000                                 EXTERN   TIM3_CCMR2.w  ; TIM3 Capture/Compare mode 
+                                                                ;register 2
+ 384                         
+ 385  000000                                 EXTERN   TIM3_CCER1.w  ; TIM3 Capture/Compare enable 
+                                                                ;register 1
+ 386                         
+ 387  000000                                 EXTERN   TIM3_CNTRH.w  ; Data bits High
+ 388                         
+ 389  000000                                 EXTERN   TIM3_CNTRL.w  ; Data bits Low
+ 390                         
+ 391  000000                                 EXTERN   TIM3_PSCR.w   ; TIM3 Prescaler register
+ 392                         
+ 393  000000                                 EXTERN   TIM3_ARRH.w   ; Data bits High
+ 394                         
+ 395  000000                                 EXTERN   TIM3_ARRL.w   ; Data bits Low
+ 396                         
+ 397  000000                                 EXTERN   TIM3_CCR1H.w  ; Data bits High
+ 398                         
+ 399  000000                                 EXTERN   TIM3_CCR1L.w  ; Data bits Low
+ 400                         
+ 401  000000                                 EXTERN   TIM3_CCR2H.w  ; Data bits High
+ 402                         
+ 403  000000                                 EXTERN   TIM3_CCR2L.w  ; Data bits Low
+ 404                         
+ 405                         ; 8-Bit  Timer 4 (TIM4)
+ 406                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 407                         
+ 408  000000                                 EXTERN   TIM4_CR1.w    ; TIM4 Control register 1
+ 409                         
+ 410  000000                                 EXTERN   TIM4_IER.w    ; TIM4 Interrupt enable 
+                                                                ;register
+ 411                         
+ 412  000000                                 EXTERN   TIM4_SR.w     ; TIM4 Status register
+ 413                         
+ 414  000000                                 EXTERN   TIM4_EGR.w    ; TIM4 Event Generation 
+                                                                ;register
+ 415                         
+ 416  000000                                 EXTERN   TIM4_CNTR.w   ; TIM4 Counter
+ 417                         
+ 418  000000                                 EXTERN   TIM4_PSCR.w   ; TIM4 Prescaler register
+ 419                         
+ 420  000000                                 EXTERN   TIM4_ARR.w    ; TIM4 Auto-reload register
+ 421                         
+ 422                         ; 10-Bit A/D Converter (ADC1)
+ 423                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 424                         
+ 425  000000                                 EXTERN   ADC_DB0RH.w   ; Data Buffer register 0 High
+ 426                         
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 10  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 427  000000                                 EXTERN   ADC_DB0RL.w   ; Data Buffer register 0 Low
+ 428                         
+ 429  000000                                 EXTERN   ADC_DB1RH.w   ; Data Buffer register 1 High
+ 430                         
+ 431  000000                                 EXTERN   ADC_DB1RL.w   ; Data Buffer register 1 Low
+ 432                         
+ 433  000000                                 EXTERN   ADC_DB2RH.w   ; Data Buffer register 2 High
+ 434                         
+ 435  000000                                 EXTERN   ADC_DB2RL.w   ; Data Buffer register 2 Low
+ 436                         
+ 437  000000                                 EXTERN   ADC_DB3RH.w   ; Data Buffer register 3 High
+ 438                         
+ 439  000000                                 EXTERN   ADC_DB3RL.w   ; Data Buffer register 3 Low
+ 440                         
+ 441  000000                                 EXTERN   ADC_DB4RH.w   ; Data Buffer register 4 High
+ 442                         
+ 443  000000                                 EXTERN   ADC_DB4RL.w   ; Data Buffer register 4 Low
+ 444                         
+ 445  000000                                 EXTERN   ADC_DB5RH.w   ; Data Buffer register 5 High
+ 446                         
+ 447  000000                                 EXTERN   ADC_DB5RL.w   ; Data Buffer register 5 Low
+ 448                         
+ 449  000000                                 EXTERN   ADC_DB6RH.w   ; Data Buffer register 6 High
+ 450                         
+ 451  000000                                 EXTERN   ADC_DB6RL.w   ; Data Buffer register 6 Low
+ 452                         
+ 453  000000                                 EXTERN   ADC_DB7RH.w   ; Data Buffer register 7 High
+ 454                         
+ 455  000000                                 EXTERN   ADC_DB7RL.w   ; Data Buffer register 7 Low
+ 456                         
+ 457  000000                                 EXTERN   ADC_DB8RH.w   ; Data Buffer register 8 High
+ 458                         
+ 459  000000                                 EXTERN   ADC_DB8RL.w   ; Data Buffer register 8 Low
+ 460                         
+ 461  000000                                 EXTERN   ADC_DB9RH.w   ; Data Buffer register 9 High
+ 462                         
+ 463  000000                                 EXTERN   ADC_DB9RL.w   ; Data Buffer register 9 Low
+ 464                         
+ 465  000000                                 EXTERN   ADC_CSR.w     ; ADC Control/Status Register
+ 466                         
+ 467  000000                                 EXTERN   ADC_CR1.w     ; ADC Configuration Register 1
+ 468                         
+ 469  000000                                 EXTERN   ADC_CR2.w     ; ADC Configuration Register 2
+ 470                         
+ 471  000000                                 EXTERN   ADC_CR3.w     ; ADC Configuration Register 3
+ 472                         
+ 473  000000                                 EXTERN   ADC_DRH.w     ; Data bits High
+ 474                         
+ 475  000000                                 EXTERN   ADC_DRL.w     ; Data bits Low
+ 476                         
+ 477  000000                                 EXTERN   ADC_TDRH.w    ; Schmitt trigger disable High
+ 478                         
+ 479  000000                                 EXTERN   ADC_TDRL.w    ; Schmitt trigger disable Low
+ 480                         
+ 481  000000                                 EXTERN   ADC_HTRH.w    ; High Threshold Register High
+ 482                         
+ 483  000000                                 EXTERN   ADC_HTRL.w    ; High Threshold Register Low
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 11  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+ 484                         
+ 485  000000                                 EXTERN   ADC_LTRH.w    ; Low Threshold Register High
+ 486                         
+ 487  000000                                 EXTERN   ADC_LTRL.w    ; Low Threshold Register Low
+ 488                         
+ 489  000000                                 EXTERN   ADC_AWSRH.w   ; Analog Watchdog Status 
+                                                                ;register High
+ 490                         
+ 491  000000                                 EXTERN   ADC_AWSRL.w   ; Analog Watchdog Status 
+                                                                ;register Low
+ 492                         
+ 493  000000                                 EXTERN   ADC_AWCRH.w   ; Analog Watchdog Control 
+                                                                ;register High
+ 494                         
+ 495  000000                                 EXTERN   ADC_AWCRL.w   ; Analog Watchdog Control 
+                                                                ;register Low
+ 496                         
+ 497                         ;  Global configuration register (CFG)
+ 498                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 499                         
+ 500  000000                                 EXTERN   CFG_GCR.w     ; CFG Global configuration 
+                                                                ;register
+ 501                         
+ 502                         ; Interrupt Software Priority Register (ITC)
+ 503                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                               ;;;;;;
+ 504                         
+ 505  000000                                 EXTERN   ITC_SPR1.w    ; Interrupt Software priority 
+                                                                ;register 1
+ 506                         
+ 507  000000                                 EXTERN   ITC_SPR2.w    ; Interrupt Software priority 
+                                                                ;register 2
+ 508                         
+ 509  000000                                 EXTERN   ITC_SPR3.w    ; Interrupt Software priority 
+                                                                ;register 3
+ 510                         
+ 511  000000                                 EXTERN   ITC_SPR4.w    ; Interrupt Software priority 
+                                                                ;register 4
+ 512                         
+ 513  000000                                 EXTERN   ITC_SPR5.w    ; Interrupt Software priority 
+                                                                ;register 5
+ 514                         
+ 515  000000                                 EXTERN   ITC_SPR6.w    ; Interrupt Software priority 
+                                                                ;register 6
+ 516                         
+ 517  000000                                 EXTERN   ITC_SPR7.w    ; Interrupt Software priority 
+                                                                ;register 7
+ 518                         
+ 519  000000                                 #endif                 ; __STM8S105C_S__
+<END_OF_INCLUSION>
+   0  000000                                 #include "stm8.inc"
+   1                                                          ;-------------------------------
+                                                                ;-----------------------
+   2                                                          ; SEGMENT MAPPING FILE 
+                                                                ;AUTOMATICALLY GENERATED BY 
+                                                                ;STVD
+   3                                                          ; SHOULD NOT BE MANUALLY 
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 12  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+                                                                ;MODIFIED.
+   4                                                          ; CHANGES WILL BE LOST WHEN FILE
+                                                                ; IS REGENERATED.
+   5                                                          ;-------------------------------
+                                                                ;-----------------------
+   6                                   
+   7  000000                                 #define  TIM_CR_bit_CEN #0
+   8  000000                                 #define  TIM_CR_bit_ARPE #7
+   9                                   
+  10  000000                                 #define  TIM_CCER1_bit_CCE2 #4
+  11  000000                                 #define  TIM_CCER1_bit_CCP2 #5
+  12  000000                                 #define  TIM_CCER1_bit_CCE1 #0
+  13  000000                                 #define  TIM_CCER1_bit_CCP1 #1
+  14  000000                                 #define  TIM_CCER2_bit_CCE3 #0
+  15  000000                                 #define  TIM_CCER2_bit_CCP3 #1
+  16                                   
+  17  000000                                 #define  TIM_CCMR_bit_OCPE #3
+  18  000000                                 #define  TIM_CCMR_bit_OCM4 #6
+  19  000000                                 #define  TIM_CCMR_bit_OCM2 #5
+  20  000000                                 #define  TIM_CCMR_bit_OCM1 #4
+  21                                   
+  22  000000                                 #define  TIM4_CR1_bit_OPM #3
+  23                                   
+  24  000000                                 #define  PD_CR1_bit_C10 #0
+  25  000000                                 #define  PD_CR2_bit_C20 #0
+<END_OF_INCLUSION>
+   4                         
+   5                                   segment  'ram1'
+   6  000000                       readDataBuf.w  dc.w     
+   7  000000                                 end      
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 13  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
+
+AWU_CSR                           ????????         no  WORD  External   rel    170  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+AWU_APR                           ????????         no  WORD  External   rel    172  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+AWU_TBR                           ????????         no  WORD  External   rel    174  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB0RH                         ????????         no  WORD  External   rel    425  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB0RL                         ????????         no  WORD  External   rel    427  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB1RH                         ????????         no  WORD  External   rel    429  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB1RL                         ????????         no  WORD  External   rel    431  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB2RH                         ????????         no  WORD  External   rel    433  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB2RL                         ????????         no  WORD  External   rel    435  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB3RH                         ????????         no  WORD  External   rel    437  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB3RL                         ????????         no  WORD  External   rel    439  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB4RH                         ????????         no  WORD  External   rel    441  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB4RL                         ????????         no  WORD  External   rel    443  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB5RH                         ????????         no  WORD  External   rel    445  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB5RL                         ????????         no  WORD  External   rel    447  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB6RH                         ????????         no  WORD  External   rel    449  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB6RL                         ????????         no  WORD  External   rel    451  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB7RH                         ????????         no  WORD  External   rel    453  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB7RL                         ????????         no  WORD  External   rel    455  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB8RH                         ????????         no  WORD  External   rel    457  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB8RL                         ????????         no  WORD  External   rel    459  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB9RH                         ????????         no  WORD  External   rel    461  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DB9RL                         ????????         no  WORD  External   rel    463  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_CSR                           ????????         no  WORD  External   rel    465  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_CR1                           ????????         no  WORD  External   rel    467  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_CR2                           ????????         no  WORD  External   rel    469  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_CR3                           ????????         no  WORD  External   rel    471  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DRH                           ????????         no  WORD  External   rel    473  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_DRL                           ????????         no  WORD  External   rel    475  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_TDRH                          ????????         no  WORD  External   rel    477  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_TDRL                          ????????         no  WORD  External   rel    479  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_HTRH                          ????????         no  WORD  External   rel    481  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_HTRL                          ????????         no  WORD  External   rel    483  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_LTRH                          ????????         no  WORD  External   rel    485  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_LTRL                          ????????         no  WORD  External   rel    487  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_AWSRH                         ????????         no  WORD  External   rel    489  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_AWSRL                         ????????         no  WORD  External   rel    491  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_AWCRH                         ????????         no  WORD  External   rel    493  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ADC_AWCRL                         ????????         no  WORD  External   rel    495  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+BEEP_CSR                          ????????         no  WORD  External   rel    179  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+CLK_ICKR                          ????????         no  WORD  External   rel    125  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_ECKR                          ????????         no  WORD  External   rel    127  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_CMSR                          ????????         no  WORD  External   rel    129  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_SWR                           ????????         no  WORD  External   rel    131  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_SWCR                          ????????         no  WORD  External   rel    133  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_CKDIVR                        ????????         no  WORD  External   rel    135  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_PCKENR1                       ????????         no  WORD  External   rel    137  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_CSSR                          ????????         no  WORD  External   rel    139  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_CCOR                          ????????         no  WORD  External   rel    141  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_PCKENR2                       ????????         no  WORD  External   rel    143  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_CANCCR                        ????????         no  WORD  External   rel    145  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_HSITRIMR                      ????????         no  WORD  External   rel    147  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+CLK_SWIMCCR                       ????????         no  WORD  External   rel    149  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 14  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+CFG_GCR                           ????????         no  WORD  External   rel    500  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+EXTI_CR1                          ????????         no  WORD  External   rel    113  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+EXTI_CR2                          ????????         no  WORD  External   rel    115  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+FLASH_CR1                         ????????         no  WORD  External   rel     94  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_CR2                         ????????         no  WORD  External   rel     96  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_NCR2                        ????????         no  WORD  External   rel     98  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_FPR                         ????????         no  WORD  External   rel    100  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_NFPR                        ????????         no  WORD  External   rel    102  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_IAPSR                       ????????         no  WORD  External   rel    104  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_PUKR                        ????????         no  WORD  External   rel    106  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+FLASH_DUKR                        ????????         no  WORD  External   rel    108  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+IWDG_KR                           ????????         no  WORD  External   rel    161  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+IWDG_PR                           ????????         no  WORD  External   rel    163  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+IWDG_RLR                          ????????         no  WORD  External   rel    165  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_CR1                           ????????         no  WORD  External   rel    203  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_CR2                           ????????         no  WORD  External   rel    205  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_FREQR                         ????????         no  WORD  External   rel    207  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_OARL                          ????????         no  WORD  External   rel    209  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_OARH                          ????????         no  WORD  External   rel    211  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_DR                            ????????         no  WORD  External   rel    213  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_SR1                           ????????         no  WORD  External   rel    215  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_SR2                           ????????         no  WORD  External   rel    217  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_SR3                           ????????         no  WORD  External   rel    219  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_ITR                           ????????         no  WORD  External   rel    221  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_CCRL                          ????????         no  WORD  External   rel    223  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_CCRH                          ????????         no  WORD  External   rel    225  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_TRISER                        ????????         no  WORD  External   rel    227  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+I2C_PECR                          ????????         no  WORD  External   rel    229  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR1                          ????????         no  WORD  External   rel    505  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR2                          ????????         no  WORD  External   rel    507  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR3                          ????????         no  WORD  External   rel    509  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR4                          ????????         no  WORD  External   rel    511  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR5                          ????????         no  WORD  External   rel    513  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR6                          ????????         no  WORD  External   rel    515  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+ITC_SPR7                          ????????         no  WORD  External   rel    517  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+PA_ODR                            ????????         no  WORD  External   rel     16  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PA_IDR                            ????????         no  WORD  External   rel     18  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PA_DDR                            ????????         no  WORD  External   rel     20  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PA_CR1                            ????????         no  WORD  External   rel     22  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PA_CR2                            ????????         no  WORD  External   rel     24  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PB_ODR                            ????????         no  WORD  External   rel     29  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PB_IDR                            ????????         no  WORD  External   rel     31  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PB_DDR                            ????????         no  WORD  External   rel     33  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PB_CR1                            ????????         no  WORD  External   rel     35  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PB_CR2                            ????????         no  WORD  External   rel     37  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PC_ODR                            ????????         no  WORD  External   rel     42  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PC_IDR                            ????????         no  WORD  External   rel     44  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PC_DDR                            ????????         no  WORD  External   rel     46  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PC_CR1                            ????????         no  WORD  External   rel     48  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PC_CR2                            ????????         no  WORD  External   rel     50  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PD_ODR                            ????????         no  WORD  External   rel     55  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PD_IDR                            ????????         no  WORD  External   rel     57  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PD_DDR                            ????????         no  WORD  External   rel     59  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 15  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+PD_CR1                            ????????         no  WORD  External   rel     61  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PD_CR2                            ????????         no  WORD  External   rel     63  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PE_ODR                            ????????         no  WORD  External   rel     68  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PE_IDR                            ????????         no  WORD  External   rel     70  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PE_DDR                            ????????         no  WORD  External   rel     72  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PE_CR1                            ????????         no  WORD  External   rel     74  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PE_CR2                            ????????         no  WORD  External   rel     76  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PG_ODR                            ????????         no  WORD  External   rel     81  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PG_IDR                            ????????         no  WORD  External   rel     83  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PG_DDR                            ????????         no  WORD  External   rel     85  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PG_CR1                            ????????         no  WORD  External   rel     87  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+PG_CR2                            ????????         no  WORD  External   rel     89  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+RST_SR                            ????????         no  WORD  External   rel    120  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+SPI_CR1                           ????????         no  WORD  External   rel    184  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_CR2                           ????????         no  WORD  External   rel    186  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_ICR                           ????????         no  WORD  External   rel    188  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_SR                            ????????         no  WORD  External   rel    190  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_DR                            ????????         no  WORD  External   rel    192  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_CRCPR                         ????????         no  WORD  External   rel    194  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_RXCRCR                        ????????         no  WORD  External   rel    196  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+SPI_TXCRCR                        ????????         no  WORD  External   rel    198  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+TIM1_CR1                          ????????         no  WORD  External   rel    259  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CR2                          ????????         no  WORD  External   rel    261  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_SMCR                         ????????         no  WORD  External   rel    263  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_ETR                          ????????         no  WORD  External   rel    265  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_IER                          ????????         no  WORD  External   rel    267  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_SR1                          ????????         no  WORD  External   rel    269  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_SR2                          ????????         no  WORD  External   rel    271  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_EGR                          ????????         no  WORD  External   rel    273  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCMR1                        ????????         no  WORD  External   rel    275  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCMR2                        ????????         no  WORD  External   rel    277  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCMR3                        ????????         no  WORD  External   rel    279  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCMR4                        ????????         no  WORD  External   rel    281  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCER1                        ????????         no  WORD  External   rel    283  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCER2                        ????????         no  WORD  External   rel    285  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CNTRH                        ????????         no  WORD  External   rel    287  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CNTRL                        ????????         no  WORD  External   rel    289  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_PSCRH                        ????????         no  WORD  External   rel    291  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_PSCRL                        ????????         no  WORD  External   rel    293  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_ARRH                         ????????         no  WORD  External   rel    295  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_ARRL                         ????????         no  WORD  External   rel    297  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_RCR                          ????????         no  WORD  External   rel    299  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR1H                        ????????         no  WORD  External   rel    301  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR1L                        ????????         no  WORD  External   rel    303  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR2H                        ????????         no  WORD  External   rel    305  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR2L                        ????????         no  WORD  External   rel    307  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR3H                        ????????         no  WORD  External   rel    309  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR3L                        ????????         no  WORD  External   rel    311  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR4H                        ????????         no  WORD  External   rel    313  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_CCR4L                        ????????         no  WORD  External   rel    315  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_BKR                          ????????         no  WORD  External   rel    317  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_DTR                          ????????         no  WORD  External   rel    319  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM1_OISR                         ????????         no  WORD  External   rel    321  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CR1                          ????????         no  WORD  External   rel    326  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 16  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+TIM2_IER                          ????????         no  WORD  External   rel    328  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_SR1                          ????????         no  WORD  External   rel    330  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_SR2                          ????????         no  WORD  External   rel    332  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_EGR                          ????????         no  WORD  External   rel    334  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCMR1                        ????????         no  WORD  External   rel    336  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCMR2                        ????????         no  WORD  External   rel    338  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCMR3                        ????????         no  WORD  External   rel    340  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCER1                        ????????         no  WORD  External   rel    342  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCER2                        ????????         no  WORD  External   rel    344  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CNTRH                        ????????         no  WORD  External   rel    346  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CNTRL                        ????????         no  WORD  External   rel    348  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_PSCR                         ????????         no  WORD  External   rel    350  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_ARRH                         ????????         no  WORD  External   rel    352  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_ARRL                         ????????         no  WORD  External   rel    354  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR1H                        ????????         no  WORD  External   rel    356  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR1L                        ????????         no  WORD  External   rel    358  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR2H                        ????????         no  WORD  External   rel    360  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR2L                        ????????         no  WORD  External   rel    362  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR3H                        ????????         no  WORD  External   rel    364  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM2_CCR3L                        ????????         no  WORD  External   rel    366  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CR1                          ????????         no  WORD  External   rel    371  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_IER                          ????????         no  WORD  External   rel    373  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_SR1                          ????????         no  WORD  External   rel    375  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_SR2                          ????????         no  WORD  External   rel    377  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_EGR                          ????????         no  WORD  External   rel    379  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCMR1                        ????????         no  WORD  External   rel    381  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCMR2                        ????????         no  WORD  External   rel    383  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCER1                        ????????         no  WORD  External   rel    385  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CNTRH                        ????????         no  WORD  External   rel    387  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CNTRL                        ????????         no  WORD  External   rel    389  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_PSCR                         ????????         no  WORD  External   rel    391  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_ARRH                         ????????         no  WORD  External   rel    393  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_ARRL                         ????????         no  WORD  External   rel    395  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCR1H                        ????????         no  WORD  External   rel    397  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCR1L                        ????????         no  WORD  External   rel    399  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCR2H                        ????????         no  WORD  External   rel    401  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM3_CCR2L                        ????????         no  WORD  External   rel    403  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_CR1                          ????????         no  WORD  External   rel    408  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_IER                          ????????         no  WORD  External   rel    410  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_SR                           ????????         no  WORD  External   rel    412  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_EGR                          ????????         no  WORD  External   rel    414  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_CNTR                         ????????         no  WORD  External   rel    416  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_PSCR                         ????????         no  WORD  External   rel    418  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+TIM4_ARR                          ????????         no  WORD  External   rel    420  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+UART2_SR                          ????????         no  WORD  External   rel    234  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_DR                          ????????         no  WORD  External   rel    236  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_BRR1                        ????????         no  WORD  External   rel    238  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_BRR2                        ????????         no  WORD  External   rel    240  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_CR1                         ????????         no  WORD  External   rel    242  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_CR2                         ????????         no  WORD  External   rel    244  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_CR3                         ????????         no  WORD  External   rel    246  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_CR4                         ????????         no  WORD  External   rel    248  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_CR6                         ????????         no  WORD  External   rel    250  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_GTR                         ????????         no  WORD  External   rel    252  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+UART2_PSCR                        ????????         no  WORD  External   rel    254  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+STMicroelectronics assembler v4.52   (C)1987-2019   Fri Aug 02 18:35:24 2019
+Page 17  Assembler
+                                               c:\_wm\stm\_asm\uart.asm
+
+WWDG_CR                           ????????         no  WORD  External   rel    154  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+WWDG_WR                           ????????         no  WORD  External   rel    156  private  undef        0     0  c:\_wm\stm\_asm\stm8s105c_s.inc
+
+readDataBuf                           0000         no  WORD  Internal   rel      6  private  undef        0     2  -
+
+
+218 labels
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'

@@ -1,0 +1,35 @@
+;	STMicroelectronics dependencies file
+
+[Version]
+Keyword=ST7Project
+Number=1.3
+
+[Root.Source Files...\include\tinydebug.c.Config.0]
+ExternDep= ..\include\tinydebug.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  DeviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\Macro.h ..\include\gpio.h  ..\include\GeneralConfig.h utils.h ..\include\tinyDebug.h
+
+[Root.Source Files...\include\tinydebug.c.Config.1]
+ExternDep= ..\include\tinydebug.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  DeviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\Macro.h ..\include\gpio.h  ..\include\GeneralConfig.h utils.h ..\include\tinyDebug.h
+
+[Root.Source Files.main.c.Config.0]
+ExternDep= main.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h" utils.h  ..\include\Macro.h deviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\gpio.h ..\include\generalConfig.h  ..\include\events.h ..\include\routing.h ..\include\Events.h Utils.h uart.h  ..\include\tinyDebug.h
+
+[Root.Source Files.main.c.Config.1]
+ExternDep= main.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h" utils.h  ..\include\Macro.h deviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\gpio.h ..\include\generalConfig.h  ..\include\events.h ..\include\routing.h ..\include\Events.h Utils.h uart.h  ..\include\tinyDebug.h
+
+[Root.Source Files.stm8_interrupt_vector.c.Config.0]
+ExternDep= stm8_interrupt_vector.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"
+
+[Root.Source Files.stm8_interrupt_vector.c.Config.1]
+ExternDep= stm8_interrupt_vector.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"
+
+[Root.Source Files.uart.c.Config.0]
+ExternDep= uart.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  ..\include\generalConfig.h utils.h ..\include\Macro.h deviceConfig.h  ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\gpio.h uart.h
+
+[Root.Source Files.uart.c.Config.1]
+ExternDep= uart.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  ..\include\generalConfig.h utils.h ..\include\Macro.h deviceConfig.h  ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\gpio.h uart.h
+
+[Root.Source Files.utils.c.Config.0]
+ExternDep= utils.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  DeviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\Macro.h ..\include\gpio.h
+
+[Root.Source Files.utils.c.Config.1]
+ExternDep= utils.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"  DeviceConfig.h ..\include\consts103F3.h  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F3P.h"  "C:\Program Files (x86)\STMicroelectronics\st_toolset\include\STM8S103F.h"  ..\include\Consts.h ..\include\Macro.h ..\include\gpio.h

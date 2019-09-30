@@ -1,0 +1,19 @@
+..\include\tinydebug.c
+deviceconfig.h
+main.c
+stm8_interrupt_vector.c
+uart.c
+uart.h
+utils.c
+utils.h
+..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\mods0.h
+..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s103f.h
+..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s103f3p.h
+..\include\consts.h
+..\include\consts103f3.h
+..\include\events.h
+..\include\generalconfig.h
+..\include\gpio.h
+..\include\macro.h
+..\include\routing.h
+..\include\tinydebug.h

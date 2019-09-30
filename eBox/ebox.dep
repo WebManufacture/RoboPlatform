@@ -1,0 +1,29 @@
+;	STMicroelectronics dependencies file
+
+[Version]
+Keyword=ST7Project
+Number=1.3
+
+[Root.Source Files.consts105c6.c.Config.0]
+ExternDep= consts105c6.c  "C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Hstm8\mods0.h"
+
+[Root.Source Files.consts105c6.c.Config.1]
+ExternDep= consts105c6.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h" Consts105c6.h  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C6.h"  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C_S.h"  Consts.h
+
+[Root.Source Files.pwmmodule.c.Config.0]
+ExternDep= pwmmodule.c  "C:\Program Files\COSMIC\CXSTM8_16K\Hstm8\mods0.h" DeviceConfig.h  consts105C6.h  "C:\Program Files\STMicroelectronics\st_toolset\include\STM8S105C6.h"  "C:\Program Files\STMicroelectronics\st_toolset\include\STM8S105C_S.h"  Consts.h Modules.h
+
+[Root.Source Files.pwmmodule.c.Config.1]
+ExternDep= pwmmodule.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h" DeviceConfig.h  consts105C6.h  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C6.h"  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C_S.h"  Consts.h Modules.h
+
+[Root.Source Files.main.c.Config.0]
+ExternDep= main.c "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"  DeviceConfig.h consts105C6.h  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C6.h"  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C_S.h"  Consts.h Modules.h
+
+[Root.Source Files.main.c.Config.1]
+ExternDep= main.c "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"  DeviceConfig.h consts105C6.h  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C6.h"  "c:\program files (x86)\stmicroelectronics\st_toolset\include\STM8S105C_S.h"  Consts.h Modules.h
+
+[Root.Source Files.stm8_interrupt_vector.c.Config.0]
+ExternDep= stm8_interrupt_vector.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"
+
+[Root.Source Files.stm8_interrupt_vector.c.Config.1]
+ExternDep= stm8_interrupt_vector.c  "C:\Program Files (x86)\COSMIC\CXSTM8_16K\Hstm8\mods0.h"

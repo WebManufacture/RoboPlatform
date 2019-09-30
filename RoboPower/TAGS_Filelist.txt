@@ -1,0 +1,25 @@
+..\include\uart.c
+..\include\utils.c
+deviceconfig.h
+main.c
+stm8_interrupt_vector.c
+..\include\consts.h
+..\include\consts103f3.h
+..\include\consts105c6.h
+..\include\events.c
+..\include\events.h
+..\include\generalconfig.c
+..\include\generalconfig.h
+..\include\gpio.h
+..\include\interrupts.c
+..\include\interrupts.h
+..\include\macro.h
+..\include\uart.h
+..\include\utils.h
+..\include\xrouter.c
+..\include\xrouter.h
+c:\program files\cosmic\cxstm8_16k\hstm8\mods0.h
+c:\program files\stmicroelectronics\st_toolset\include\stm8s103f.h
+c:\program files\stmicroelectronics\st_toolset\include\stm8s103f3p.h
+c:\program files\stmicroelectronics\st_toolset\include\stm8s105c6.h
+c:\program files\stmicroelectronics\st_toolset\include\stm8s105c_s.h

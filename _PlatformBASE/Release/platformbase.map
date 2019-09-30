@@ -1,0 +1,732 @@
+
+Map of Release\platformbase.sm8 from link file Release\platformbase.lkf - Sat Sep 29 12:53:40 2018
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008080 length     0 segment .const
+start 0000808e end 00008451 length   963 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000006 length     6 segment .bsct, initialized
+start 00008088 end 0000808e length     6 segment .bsct, from
+start 00000006 end 00000022 length    28 segment .ubsct
+start 00000022 end 00000022 length     0 segment .bit
+start 00000022 end 00000022 length     0 segment .share
+start 00000030 end 00000030 length     0 segment .data
+start 00000030 end 000002ee length   702 segment .bss
+start 00000000 end 00000388 length   904 segment .info.
+start 0000ffe0 end 00010060 length   128 segment .const
+start 00008080 end 00008088 length     8 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8:
+start 0000808e end 000080de length    80 section .text
+start 00000030 end 00000030 length     0 section .bss
+start 00000006 end 00000006 length     0 section .ubsct
+start 00000000 end 00000034 length    52 section .info.
+
+Release\tinydebug.o:
+start 000080de end 00008286 length   424 section .text
+start 00000000 end 00000002 length     2 section .bsct
+start 00000006 end 00000014 length    14 section .ubsct
+start 00000034 end 000000c0 length   140 section .info.
+
+Release\main.o:
+start 00008286 end 000082ce length    72 section .text
+start 00000030 end 000002ee length   702 section .bss
+start 00000002 end 00000006 length     4 section .bsct
+start 000000c0 end 00000147 length   135 section .info.
+
+Release\uart.o:
+start 000082ce end 0000842f length   353 section .text
+start 00000014 end 0000001c length     8 section .ubsct
+start 00000147 end 000001ce length   135 section .info.
+
+Release\utils.o:
+start 0000842f end 00008450 length    33 section .text
+start 000001ce end 00000256 length   136 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\libm0.sm8)xreg.o:
+start 0000001c end 0000001f length     3 section .ubsct
+start 00000256 end 00000285 length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\libm0.sm8)yreg.o:
+start 0000001f end 00000022 length     3 section .ubsct
+start 00000285 end 000002b4 length    47 section .info.
+
+Release\stm8_interrupt_vector.o:
+start 00008450 end 00008451 length     1 section .text
+start 000002b4 end 0000034c length   152 section .info.
+start 0000ffe0 end 00010060 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Release\main.o:
+_main                         >   35   (3)
+
+Release\stm8_interrupt_vector.o:
+f_NonHandledInterrupt         >    6   (6)
+
+Release\tinydebug.o:
+_InitDebug                        32   (22)
+_ProcessPacket                    18   (4) *** pointer() ***
+___evt_init_debug             >   36   (4)
+__msg_debug_Call                   2   (2)
+__msg_debug_CopyMem                2   (2)
+__msg_debug_GetMem                14   (9)
+__msg_debug_GoTo                   2   (2)
+__msg_debug_ResetDevice            4   (2)
+__msg_debug_SetMem                 8   (8)
+__msg_debug_UnblockMem             5   (2)
+__msg_routing_SendFactoryNum      10   (5)
+__msg_routing_SetDeviceAddr        5   (5)
+
+Release\uart.o:
+_CheckUart                         2   (2)
+_ClearUart                    >    2   (2)
+_GetUartData                  >    2   (2)
+_InitUART                          2   (2)
+_UART_RX_IRQHandler           >   14   (11)
+_UART_RX_handler                   3   (3)
+_UART_TX_IRQHandler           >   14   (11)
+_UART_TX_handler                   3   (3)
+_UartSendData                      5   (3)
+_WaitSend                          2   (2)
+
+Release\utils.o:
+_Reset                             2   (2)
+_UnblockEEPROM                     3   (3)
+_UnblockFLASH                      3   (3)
+
+Stack size: 50
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > _ClearUart: (2)
+
+   2 > _GetUartData: (2)
+
+   3 > _UART_RX_IRQHandler: (11)
+   4      + _UART_RX_handler: (3)
+       
+   5 > _UART_TX_IRQHandler: (11)
+   6      + _UART_TX_handler: (3)
+       
+   7 > ___evt_init_debug: (4)
+   8      + _InitDebug: (22)
+   9      |    + __msg_routing_SendFactoryNum: (5)
+  10      |    |    + _UartSendData: (3)
+  11      |    |    |    + _WaitSend: (2)
+          |    |    | 
+          |    | 
+          | 
+       
+  12 > __stext: (0)
+
+  13 > _main: (3)
+  14      + _CheckUart: (2)
+  15      + _InitDebug --> 8
+  16      + _InitUART: (2)
+  17      + _ProcessPacket: (4)
+  18      |    + (__msg_debug_Call) ...
+  19      |    + (__msg_debug_CopyMem) ...
+  20      |    + (__msg_debug_GetMem) ...
+  21      |    + (__msg_debug_GoTo) ...
+  22      |    + (__msg_debug_ResetDevice) ...
+  23      |    + (__msg_debug_SetMem) ...
+  24      |    + (__msg_debug_UnblockMem) ...
+  25      |    + __msg_routing_SendFactoryNum --> 9
+  26      |    + __msg_routing_SetDeviceAddr: (5)
+          | 
+  27      + _Reset: (2)
+  28      + _UnblockEEPROM: (3)
+       
+  29 > f_NonHandledInterrupt: (6)
+
+  30   _CheckUart --> 14
+
+  31   _InitDebug --> 8
+
+  32   _InitUART --> 16
+
+  33   _ProcessPacket --> 17
+
+  34   _Reset --> 27
+
+  35   _UART_RX_handler --> 4
+
+  36   _UART_TX_handler --> 6
+
+  37   _UartSendData --> 10
+
+  38   _UnblockEEPROM --> 28
+
+  39   _UnblockFLASH: (3)
+
+  40   _WaitSend --> 11
+
+  41   __msg_debug_Call: (2)
+
+  42   __msg_debug_CopyMem: (2)
+
+  43   __msg_debug_GetMem: (9)
+  44      + _UartSendData --> 10
+       
+  45   __msg_debug_GoTo: (2)
+
+  46   __msg_debug_ResetDevice: (2)
+  47      + _Reset --> 27
+       
+  48   __msg_debug_SetMem: (8)
+
+  49   __msg_debug_UnblockMem: (2)
+  50      + _UnblockEEPROM --> 28
+  51      + _UnblockFLASH --> 39
+       
+  52   __msg_routing_SendFactoryNum --> 9
+
+  53   __msg_routing_SetDeviceAddr --> 26
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_ADC_AWCR                      0000540e   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_AWCRH                     0000540e   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_AWCRL                     0000540f   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_AWSR                      0000540c   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_AWSRH                     0000540c   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_AWSRL                     0000540d   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_CR1                       00005401   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_CR2                       00005402   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_CR3                       00005403   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_CSR                       00005400   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB0R                      000053e0   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB0RH                     000053e0   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB0RL                     000053e1   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB1R                      000053e2   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB1RH                     000053e2   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB1RL                     000053e3   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB2R                      000053e4   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB2RH                     000053e4   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB2RL                     000053e5   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB3R                      000053e6   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB3RH                     000053e6   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB3RL                     000053e7   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB4R                      000053e8   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB4RH                     000053e8   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB4RL                     000053e9   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB5R                      000053ea   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB5RH                     000053ea   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB5RL                     000053eb   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB6R                      000053ec   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB6RH                     000053ec   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB6RL                     000053ed   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB7R                      000053ee   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB7RH                     000053ee   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB7RL                     000053ef   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB8R                      000053f0   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB8RH                     000053f0   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB8RL                     000053f1   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB9R                      000053f2   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB9RH                     000053f2   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DB9RL                     000053f3   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DR                        00005404   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DRH                       00005404   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_DRL                       00005405   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_HTR                       00005408   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_HTRH                      00005408   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_HTRL                      00005409   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_LTR                       0000540a   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_LTRH                      0000540a   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_LTRL                      0000540b   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_TDR                       00005406   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_TDRH                      00005406   defined in Release\tinydebug.o
+                                          *** not used ***
+_ADC_TDRL                      00005407   defined in Release\tinydebug.o
+                                          *** not used ***
+_AWU_APR                       000050f1   defined in Release\tinydebug.o
+                                          *** not used ***
+_AWU_CSR                       000050f0   defined in Release\tinydebug.o
+                                          *** not used ***
+_AWU_TBR                       000050f2   defined in Release\tinydebug.o
+                                          *** not used ***
+_BEEP_CSR                      000050f3   defined in Release\tinydebug.o
+                                          *** not used ***
+_CFG_GCR                       00007f60   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_CANCCR                    000050cb   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_CCOR                      000050c9   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_CKDIVR                    000050c6   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_CMSR                      000050c3   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_CSSR                      000050c8   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_ECKR                      000050c1   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_HSITRIMR                  000050cc   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_ICKR                      000050c0   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_PCKENR1                   000050c7   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_PCKENR2                   000050ca   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_SWCR                      000050c5   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_SWIMCCR                   000050cd   defined in Release\tinydebug.o
+                                          *** not used ***
+_CLK_SWR                       000050c4   defined in Release\tinydebug.o
+                                          *** not used ***
+_CheckUart                     000082eb   defined in Release\uart.o section .text
+                                          used in Release\main.o
+_ClearUart                     00008301   defined in Release\uart.o section .text
+_DeviceAddr                    00000000   defined in Release\tinydebug.o section .bsct, initialized
+_DeviceConfig                  00004000   defined in Release\tinydebug.o
+_EXTI_CR1                      000050a0   defined in Release\tinydebug.o
+                                          *** not used ***
+_EXTI_CR2                      000050a1   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_CR1                     0000505a   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_CR2                     0000505b   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_DUKR                    00005064   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_FPR                     0000505d   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_IAPSR                   0000505f   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_NCR2                    0000505c   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_NFPR                    0000505e   defined in Release\tinydebug.o
+                                          *** not used ***
+_FLASH_PUKR                    00005062   defined in Release\tinydebug.o
+                                          *** not used ***
+_GetUartData                   000082f6   defined in Release\uart.o section .text
+_Handlers                      00000006   defined in Release\tinydebug.o section .ubsct
+_I2C_CCRH                      0000521c   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_CCRL                      0000521b   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_CR1                       00005210   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_CR2                       00005211   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_DR                        00005216   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_FREQR                     00005212   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_ITR                       0000521a   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_OARH                      00005214   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_OARL                      00005213   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_PECR                      0000521e   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_SR1                       00005217   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_SR2                       00005218   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_SR3                       00005219   defined in Release\tinydebug.o
+                                          *** not used ***
+_I2C_TRISER                    0000521d   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR1                      00007f70   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR2                      00007f71   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR3                      00007f72   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR4                      00007f73   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR5                      00007f74   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR6                      00007f75   defined in Release\tinydebug.o
+                                          *** not used ***
+_ITC_SPR7                      00007f76   defined in Release\tinydebug.o
+                                          *** not used ***
+_IWDG_KR                       000050e0   defined in Release\tinydebug.o
+                                          *** not used ***
+_IWDG_PR                       000050e1   defined in Release\tinydebug.o
+                                          *** not used ***
+_IWDG_RLR                      000050e2   defined in Release\tinydebug.o
+                                          *** not used ***
+_InitDebug                     00008253   defined in Release\tinydebug.o section .text
+                                          used in Release\main.o
+_InitUART                      000082ce   defined in Release\uart.o section .text
+                                          used in Release\main.o
+_PA                            00005000   defined in Release\tinydebug.o
+                                          *** not used ***
+_PA_CR1                        00005003   defined in Release\tinydebug.o
+                                          *** not used ***
+_PA_CR2                        00005004   defined in Release\tinydebug.o
+                                          *** not used ***
+_PA_DDR                        00005002   defined in Release\tinydebug.o
+                                          *** not used ***
+_PA_IDR                        00005001   defined in Release\tinydebug.o
+                                          *** not used ***
+_PA_ODR                        00005000   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB                            00005005   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB_CR1                        00005008   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB_CR2                        00005009   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB_DDR                        00005007   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB_IDR                        00005006   defined in Release\tinydebug.o
+                                          *** not used ***
+_PB_ODR                        00005005   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC                            0000500a   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC_CR1                        0000500d   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC_CR2                        0000500e   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC_DDR                        0000500c   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC_IDR                        0000500b   defined in Release\tinydebug.o
+                                          *** not used ***
+_PC_ODR                        0000500a   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD                            0000500f   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD_CR1                        00005012   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD_CR2                        00005013   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD_DDR                        00005011   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD_IDR                        00005010   defined in Release\tinydebug.o
+                                          *** not used ***
+_PD_ODR                        0000500f   defined in Release\tinydebug.o
+                                          *** not used ***
+_PpA                           00005000   defined in Release\tinydebug.o
+                                          *** not used ***
+_PpB                           00005005   defined in Release\tinydebug.o
+                                          *** not used ***
+_PpC                           0000500a   defined in Release\tinydebug.o
+                                          *** not used ***
+_PpD                           0000500f   defined in Release\tinydebug.o
+                                          *** not used ***
+_ProcessPacket                 00008210   defined in Release\tinydebug.o section .text
+                                          used in Release\main.o
+_RST_SR                        000050b3   defined in Release\tinydebug.o
+                                          *** not used ***
+_Reset                         0000844b   defined in Release\utils.o section .text
+                                          used in Release\tinydebug.o
+                                                  Release\main.o
+_RouterAddr                    00000001   defined in Release\tinydebug.o section .bsct, initialized
+_SPI_CR1                       00005200   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_CR2                       00005201   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_CRCPR                     00005205   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_DR                        00005204   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_ICR                       00005202   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_RXCRCR                    00005206   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_SR                        00005203   defined in Release\tinydebug.o
+                                          *** not used ***
+_SPI_TXCRCR                    00005207   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_ARR                      00005262   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_ARRH                     00005262   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_ARRL                     00005263   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_BKR                      0000526d   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCER1                    0000525c   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCER2                    0000525d   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCMR1                    00005258   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCMR2                    00005259   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCMR3                    0000525a   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCMR4                    0000525b   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR1                     00005265   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR1H                    00005265   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR1L                    00005266   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR2                     00005267   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR2H                    00005267   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR2L                    00005268   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR3                     00005269   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR3H                    00005269   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR3L                    0000526a   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR4                     0000526b   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR4H                    0000526b   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CCR4L                    0000526c   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CNTR                     0000525e   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CNTRH                    0000525e   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CNTRL                    0000525f   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CR1                      00005250   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_CR2                      00005251   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_DTR                      0000526e   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_EGR                      00005257   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_ETR                      00005253   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_IER                      00005254   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_OISR                     0000526f   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_PSCR                     00005260   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_PSCRH                    00005260   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_PSCRL                    00005261   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_RCR                      00005264   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_SMCR                     00005252   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_SR1                      00005255   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM1_SR2                      00005256   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_ARR                      0000530f   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_ARRH                     0000530f   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_ARRL                     00005310   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCER1                    0000530a   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCER2                    0000530b   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCMR1                    00005307   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCMR2                    00005308   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCMR3                    00005309   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR1                     00005311   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR1H                    00005311   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR1L                    00005312   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR2                     00005313   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR2H                    00005313   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR2L                    00005314   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR3                     00005315   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR3H                    00005315   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CCR3L                    00005316   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CNTR                     0000530c   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CNTRH                    0000530c   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CNTRL                    0000530d   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_CR1                      00005300   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_EGR                      00005306   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_IER                      00005303   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_PSCR                     0000530e   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_SR1                      00005304   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM2_SR2                      00005305   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_ARR                      00005348   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_CNTR                     00005346   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_CR1                      00005340   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_EGR                      00005345   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_IER                      00005343   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_PSCR                     00005347   defined in Release\tinydebug.o
+                                          *** not used ***
+_TIM4_SR                       00005344   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_BRR1                    00005232   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_BRR2                    00005233   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_CR1                     00005234   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_CR2                     00005235   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_CR3                     00005236   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_CR4                     00005237   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_CR5                     00005238   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_DR                      00005231   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_GTR                     00005239   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_PSCR                    0000523a   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART1_SR                      00005230   defined in Release\tinydebug.o
+                                          *** not used ***
+_UART_RX_IRQHandler            000083eb   defined in Release\uart.o section .text
+                                          used in Release\stm8_interrupt_vector.o
+_UART_RX_handler               0000831e   defined in Release\uart.o section .text
+_UART_TX_IRQHandler            0000840d   defined in Release\uart.o section .text
+                                          used in Release\stm8_interrupt_vector.o
+_UART_TX_handler               00008398   defined in Release\uart.o section .text
+_UartSendData                  0000830d   defined in Release\uart.o section .text
+                                          used in Release\tinydebug.o
+_UnblockEEPROM                 0000842f   defined in Release\utils.o section .text
+                                          used in Release\tinydebug.o
+                                                  Release\main.o
+_UnblockFLASH                  0000843d   defined in Release\utils.o section .text
+                                          used in Release\tinydebug.o
+_WWDG_CR                       000050d1   defined in Release\tinydebug.o
+                                          *** not used ***
+_WWDG_WR                       000050d2   defined in Release\tinydebug.o
+                                          *** not used ***
+_WaitSend                      00008304   defined in Release\uart.o section .text
+___evt_init_debug              00008251   defined in Release\tinydebug.o section .text
+__endmem                       000001ff   defined in command file
+                                          *** not used ***
+__endzp                        00000022   defined in command file section .ubsct
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+__idesc__                      00008080   defined in linker section .init
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+__memory                       000002ee   defined in command file section .bss
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+__msg_debug_Call               00008203   defined in Release\tinydebug.o section .text
+__msg_debug_CopyMem            000081f4   defined in Release\tinydebug.o section .text
+__msg_debug_GetMem             00008141   defined in Release\tinydebug.o section .text
+__msg_debug_GoTo               00008204   defined in Release\tinydebug.o section .text
+__msg_debug_ResetDevice        00008205   defined in Release\tinydebug.o section .text
+__msg_debug_SetMem             000081bc   defined in Release\tinydebug.o section .text
+__msg_debug_UnblockMem         000081f5   defined in Release\tinydebug.o section .text
+__msg_routing_SendFactoryNum   000080de   defined in Release\tinydebug.o section .text
+__msg_routing_SetDeviceAddr    00008116   defined in Release\tinydebug.o section .text
+__stack                        000003ff   defined in command file
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+__startmem                     000002ee   defined in command file section .bss
+                                          *** not used ***
+__stext                        0000808e   defined in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8 section .text
+                                          used in Release\stm8_interrupt_vector.o
+__vectab                       0000ffe0   defined in Release\stm8_interrupt_vector.o section .const
+                                          *** not used ***
+_buffers                       00000030   defined in Release\main.o section .bss
+_exit                          000080dc   defined in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8 section .text
+_main                          00008286   defined in Release\main.o section .text
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+_readDataBuf                   00000002   defined in Release\main.o section .bsct, initialized
+                                          used in Release\uart.o
+_urState                       00000018   defined in Release\uart.o section .ubsct
+_uwState                       00000014   defined in Release\uart.o section .ubsct
+_writeDataBuf                  00000004   defined in Release\main.o section .bsct, initialized
+                                          used in Release\uart.o
+c_x                            0000001c   defined in (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\libm0.sm8)xreg.o section .ubsct
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+                                                  Release\uart.o
+c_y                            0000001f   defined in (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\libm0.sm8)yreg.o section .ubsct
+                                          used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\Lib\crtsi0.sm8
+                                                  Release\uart.o
+f_NonHandledInterrupt          00008450   defined in Release\stm8_interrupt_vector.o section .text

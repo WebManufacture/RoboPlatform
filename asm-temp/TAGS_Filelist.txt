@@ -1,0 +1,8 @@
+mapping.asm
+..\_asm\stm8s105c_s.asm
+..\_asm\functions.asm
+main.asm
+..\_asm\stm8s105c_s.inc
+mapping.inc
+..\..\..\program files (x86)\stmicroelectronics\st_toolset\asm\include\stm8s105c_s.inc
+..\_asm\stm8.inc

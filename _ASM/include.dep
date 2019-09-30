@@ -1,0 +1,17 @@
+;	STMicroelectronics dependencies file
+
+[Version]
+Keyword=ST7Project
+Number=1.3
+
+[Root.Source Files.uart.asm.Config.0]
+ExternDep= uart.asm stm8s105c_s.inc stm8.inc
+
+[Root.Source Files.mapping.asm.Config.0]
+ExternDep= mapping.asm
+
+[Root.Source Files.functions.asm.Config.0]
+ExternDep= functions.asm stm8s105c_s.inc stm8.inc
+
+[Root.Include Files.stm8s105c_s.asm.Config.0]
+ExternDep= stm8s105c_s.asm

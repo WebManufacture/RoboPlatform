@@ -1,0 +1,264 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BeeperTaskHandler	pwmmodule.c	141;"	function	signature:(union TaskData task, long ticks)
+BeeperTaskHandler	pwmmodule.c	7;"	prototype	file:	signature:(union TaskData task, long ticks)
+BeginMode	modules.h	15;"	member	struct:Settings
+BeginMode	modules.h	26;"	member	struct:WorkSettings
+CR1	consts.h	24;"	member	struct:Port
+CR2	consts.h	25;"	member	struct:Port
+DDR	consts.h	23;"	member	struct:Port
+DEF_16BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	20;"	macro
+DEF_16BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	25;"	macro
+DEF_16BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	20;"	macro
+DEF_16BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	25;"	macro
+DEF_8BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	19;"	macro
+DEF_8BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	24;"	macro
+DEF_8BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	19;"	macro
+DEF_8BIT_REG_AT	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	24;"	macro
+DeviceAddr	modules.h	12;"	member	struct:Settings
+DeviceAddr	modules.h	20;"	member	struct:WorkSettings
+EndMode	modules.h	16;"	member	struct:Settings
+EndMode	modules.h	27;"	member	struct:WorkSettings
+GradTaskHandler	pwmmodule.c	108;"	function	signature:(union TaskData data, long ticks)
+GradTaskHandler	pwmmodule.c	5;"	prototype	file:	signature:(union TaskData task, long ticks)
+In	consts.h	22;"	member	struct:Port
+Init	main.c	90;"	function	signature:(void)
+NoTaskHandler	main.c	25;"	prototype	file:	signature:(union TaskData task, long ticks)
+NoTaskHandler	main.c	61;"	function	signature:(union TaskData data, long ticks)
+NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
+NonHandledInterruptADC	stm8_interrupt_vector.c	80;"	function	signature:(void)
+NonHandledInterruptAWU	stm8_interrupt_vector.c	36;"	function	signature:(void)
+NonHandledInterruptCLK	stm8_interrupt_vector.c	44;"	function	signature:(void)
+NonHandledInterruptEXTI	stm8_interrupt_vector.c	53;"	function	signature:(void)
+NonHandledInterruptFLASH	stm8_interrupt_vector.c	62;"	function	signature:(void)
+NonHandledInterruptTIM	stm8_interrupt_vector.c	71;"	function	signature:(void)
+NonHandledInterruptTLI	stm8_interrupt_vector.c	28;"	function	signature:(void)
+NonHandledInterruptTRAP	stm8_interrupt_vector.c	20;"	function	signature:(void)
+OnCicle	modules.h	46;"	prototype	signature:(unsigned long ticks)
+OnCicle	pwmmodule.c	146;"	function	signature:(unsigned long ticks)
+OnInit	modules.h	45;"	prototype	signature:(struct WorkSettings settings)
+OnInit	pwmmodule.c	42;"	function	signature:(struct WorkSettings settings)
+OnTick	modules.h	47;"	prototype	signature:(unsigned long ticks)
+OnTick	pwmmodule.c	180;"	function	signature:(unsigned long ticks)
+Out	consts.h	21;"	member	struct:Port
+PA_ODR	consts.h	28;"	variable	typeref:struct:PA
+PA_ODR	consts.h	76;"	variable	typeref:struct:PpA
+PB_ODR	consts.h	29;"	variable	typeref:struct:PB
+PB_ODR	consts.h	77;"	variable	typeref:struct:PpB
+PC_ODR	consts.h	30;"	variable	typeref:struct:PC
+PC_ODR	consts.h	78;"	variable	typeref:struct:PpC
+PD_ODR	consts.h	31;"	variable	typeref:struct:PD
+PD_ODR	consts.h	79;"	variable	typeref:struct:PpD
+PE_ODR	consts105c6.c	4;"	variable	typeref:struct:PE
+PE_ODR	consts105c6.c	6;"	variable	typeref:struct:PpE
+PE_ODR	consts105k4-карась.c	6;"	variable	typeref:struct:PE
+PE_ODR	consts105k4-карась.c	8;"	variable	typeref:struct:PpE
+PF_ODR	consts105k4-карась.c	7;"	variable	typeref:struct:PF
+PF_ODR	consts105k4-карась.c	9;"	variable	typeref:struct:PpF
+PG_ODR	consts105c6.c	5;"	variable	typeref:struct:PG
+PG_ODR	consts105c6.c	7;"	variable	typeref:struct:PpG
+PWM	pwmmodule.c	38;"	variable	typeref:struct:PWMdata
+PWMcursor	pwmmodule.c	40;"	variable
+PWMdata	pwmmodule.c	30;"	struct	file:
+Param0	modules.h	7;"	member	struct:SystemTask
+PinTask	pwmmodule.c	10;"	struct	file:
+PinTaskHandler	pwmmodule.c	4;"	prototype	file:	signature:(union TaskData task, long ticks)
+PinTaskHandler	pwmmodule.c	66;"	function	signature:(union TaskData data, long ticks)
+Pins	consts.h	33;"	struct
+Port	consts.h	20;"	struct
+ProcessTask	main.c	52;"	function	signature:(union TaskData *task)
+PwmTask	pwmmodule.c	17;"	struct	file:
+PwmTaskData	pwmmodule.c	24;"	union	file:
+PwmTaskHandler	pwmmodule.c	114;"	function	signature:(union TaskData data, long ticks)
+PwmTaskHandler	pwmmodule.c	6;"	prototype	file:	signature:(union TaskData task, long ticks)
+RESET_INIT_MODE	modules.h	2;"	macro
+RESTART_INIT_MODE	modules.h	1;"	macro
+RegisterTaskHandler	main.c	47;"	function	signature:(unsigned char index, TaskHandler handler)
+RegisterTaskHandler	modules.h	43;"	prototype	signature:(unsigned char index, TaskHandler handler)
+Reserved	modules.h	24;"	member	struct:WorkSettings
+ReservedInt	modules.h	25;"	member	struct:WorkSettings
+ReservedInterrupt	stm8_interrupt_vector.c	99;"	function	signature:(void)
+Reset	main.c	65;"	function	signature:(void)
+Reset	modules.h	41;"	prototype	signature:(void)
+Restart	main.c	69;"	function	signature:(void)
+Restart	modules.h	42;"	prototype	signature:(void)
+STM8S105C6	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c6.h	3;"	macro
+STM8S105C_S	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	12;"	macro
+STM8S105K	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	12;"	macro
+STM8S105K4	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k4.h	3;"	macro
+Settings	modules.h	11;"	struct
+Stop	main.c	160;"	function	signature:(void)
+SysB0	consts105c6.h	25;"	macro
+SysB0	consts105k4-карась.h	22;"	macro
+SysB1	consts105c6.h	24;"	macro
+SysB1	consts105k4-карась.h	21;"	macro
+SysG0	consts105c6.h	23;"	macro
+SysG0	consts105k4-карась.h	20;"	macro
+SysG1	consts105c6.h	22;"	macro
+SysG1	consts105k4-карась.h	19;"	macro
+SysR0	consts105c6.h	21;"	macro
+SysR0	consts105k4-карась.h	18;"	macro
+SysR1	consts105c6.h	20;"	macro
+SysR1	consts105k4-карась.h	17;"	macro
+SysTaskHandler	pwmmodule.c	8;"	prototype	file:	signature:(union TaskData task, long ticks)
+SystemTask	modules.h	4;"	struct
+TaskData	modules.h	31;"	union
+TaskHandler	modules.h	38;"	typedef
+TimeBase	modules.h	14;"	member	struct:Settings
+TimeBase	modules.h	22;"	member	struct:WorkSettings
+TimeDiv	modules.h	23;"	member	struct:WorkSettings
+UART2Interrupt	stm8_interrupt_vector.c	89;"	function	signature:(void)
+UART_BRR1	consts105c6.h	14;"	macro
+UART_BRR1	consts105k4-карась.h	13;"	macro
+UART_BRR2	consts105c6.h	13;"	macro
+UART_BRR2	consts105k4-карась.h	12;"	macro
+UART_CR1	consts105c6.h	8;"	macro
+UART_CR1	consts105k4-карась.h	7;"	macro
+UART_CR2	consts105c6.h	9;"	macro
+UART_CR2	consts105k4-карась.h	8;"	macro
+UART_CR3	consts105c6.h	10;"	macro
+UART_CR3	consts105k4-карась.h	9;"	macro
+UART_CR4	consts105c6.h	11;"	macro
+UART_CR4	consts105k4-карась.h	10;"	macro
+UART_CR5	consts105c6.h	12;"	macro
+UART_CR5	consts105k4-карась.h	11;"	macro
+UART_DR	consts105c6.h	16;"	macro
+UART_DR	consts105k4-карась.h	15;"	macro
+UART_PARITY_EN	consts105c6.h	17;"	macro
+UART_PARITY_ODD	consts105c6.h	18;"	macro
+UART_SR	consts105c6.h	15;"	macro
+UART_SR	consts105k4-карась.h	14;"	macro
+UartData	main.c	12;"	struct	file:
+Version	modules.h	13;"	member	struct:Settings
+Version	modules.h	21;"	member	struct:WorkSettings
+WorkMode	modules.h	28;"	member	struct:WorkSettings
+WorkSettings	modules.h	19;"	struct
+_Consts_	consts.h	2;"	macro
+_Hardware_Ext	consts105k4-карась.c	5;"	macro	file:
+_Hardware_Ext	deviceconfig.h	2;"	macro
+__MODS0__	c:\program files (x86)\cosmic\cxstm8_16k\hstm8\mods0.h	11;"	macro
+__STM8S105C_S__	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105c_s.h	6;"	macro
+__STM8S105K__	c:\program files (x86)\stmicroelectronics\st_toolset\include\stm8s105k.h	6;"	macro
+_stext	stm8_interrupt_vector.c	107;"	prototype	file:
+_vectab	stm8_interrupt_vector.c	114;"	variable
+abs	consts.h	16;"	macro
+address	main.c	14;"	member	struct:UartData	file:
+bit0	consts.h	4;"	macro
+bit1	consts.h	5;"	macro
+bit2	consts.h	6;"	macro
+bit3	consts.h	7;"	macro
+bit4	consts.h	8;"	macro
+bit5	consts.h	9;"	macro
+bit6	consts.h	10;"	macro
+bit7	consts.h	11;"	macro
+bits	consts105c6.c	9;"	variable
+bits	consts105k4-карась.c	11;"	variable
+command	main.c	13;"	member	struct:UartData	file:
+currentTask	main.c	9;"	variable	typeref:union:TaskData
+currentTaskId	main.c	8;"	variable
+data	main.c	15;"	member	struct:UartData	typeref:union:UartData::TaskData	file:
+data	modules.h	33;"	member	union:TaskData
+data	pwmmodule.c	25;"	member	union:PwmTaskData	file:
+ddr0	consts.h	50;"	member	struct:Pins
+ddr1	consts.h	51;"	member	struct:Pins
+ddr2	consts.h	52;"	member	struct:Pins
+ddr3	consts.h	53;"	member	struct:Pins
+ddr4	consts.h	54;"	member	struct:Pins
+ddr5	consts.h	55;"	member	struct:Pins
+ddr6	consts.h	56;"	member	struct:Pins
+ddr7	consts.h	57;"	member	struct:Pins
+esp0	consts.h	66;"	member	struct:Pins
+esp1	consts.h	67;"	member	struct:Pins
+esp2	consts.h	68;"	member	struct:Pins
+esp3	consts.h	69;"	member	struct:Pins
+esp4	consts.h	70;"	member	struct:Pins
+esp5	consts.h	71;"	member	struct:Pins
+esp6	consts.h	72;"	member	struct:Pins
+esp7	consts.h	73;"	member	struct:Pins
+func	modules.h	6;"	member	struct:SystemTask
+handlers	main.c	27;"	variable
+iTim2_compare	pwmmodule.c	211;"	function	signature:(void)
+iTim2_compare	stm8_interrupt_vector.c	109;"	prototype	file:
+iTim2_overflow	pwmmodule.c	184;"	function	signature:(void)
+iTim2_overflow	stm8_interrupt_vector.c	108;"	prototype	file:
+iTim4_OVF	main.c	238;"	function	signature:(void)
+iTim4_OVF	stm8_interrupt_vector.c	110;"	prototype	file:
+iUART_RX	main.c	249;"	function	signature:(void)
+iUART_RX	stm8_interrupt_vector.c	111;"	prototype	file:
+iUART_TX	main.c	297;"	function	signature:(void)
+iUART_TX	stm8_interrupt_vector.c	112;"	prototype	file:
+in0	consts.h	42;"	member	struct:Pins
+in1	consts.h	43;"	member	struct:Pins
+in2	consts.h	44;"	member	struct:Pins
+in3	consts.h	45;"	member	struct:Pins
+in4	consts.h	46;"	member	struct:Pins
+in5	consts.h	47;"	member	struct:Pins
+in6	consts.h	48;"	member	struct:Pins
+in7	consts.h	49;"	member	struct:Pins
+increment	pwmmodule.c	20;"	member	struct:PwmTask	file:
+increment	pwmmodule.c	32;"	member	struct:PWMdata	file:
+index	main.c	21;"	member	struct:uartState	file:
+interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
+interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
+interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
+interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
+main	main.c	169;"	function
+out0	consts.h	34;"	member	struct:Pins
+out1	consts.h	35;"	member	struct:Pins
+out2	consts.h	36;"	member	struct:Pins
+out3	consts.h	37;"	member	struct:Pins
+out4	consts.h	38;"	member	struct:Pins
+out5	consts.h	39;"	member	struct:Pins
+out6	consts.h	40;"	member	struct:Pins
+out7	consts.h	41;"	member	struct:Pins
+phase	main.c	19;"	member	struct:uartState	file:
+pinTask	pwmmodule.c	27;"	member	union:PwmTaskData	typeref:struct:PwmTaskData::PinTask	file:
+pins	consts105c6.c	33;"	variable	typeref:struct:Pins
+pins	consts105k4-карась.c	42;"	variable	typeref:struct:Pins
+port	pwmmodule.c	12;"	member	struct:PinTask	file:
+port	pwmmodule.c	19;"	member	struct:PwmTask	file:
+portCount	consts105c6.h	5;"	macro
+portCount	consts105k4-карась.h	5;"	macro
+ports	consts105c6.c	57;"	variable	typeref:struct:Port
+ports	consts105k4-карась.c	73;"	variable	typeref:struct:Port
+pup0	consts.h	58;"	member	struct:Pins
+pup1	consts.h	59;"	member	struct:Pins
+pup2	consts.h	60;"	member	struct:Pins
+pup3	consts.h	61;"	member	struct:Pins
+pup4	consts.h	62;"	member	struct:Pins
+pup5	consts.h	63;"	member	struct:Pins
+pup6	consts.h	64;"	member	struct:Pins
+pup7	consts.h	65;"	member	struct:Pins
+pwmTask	pwmmodule.c	26;"	member	union:PwmTaskData	typeref:struct:PwmTaskData::PwmTask	file:
+res	consts.h	14;"	macro
+set	consts.h	13;"	macro
+settings	main.c	6;"	variable	typeref:struct:WorkSettings
+settings	modules.h	34;"	member	union:TaskData	typeref:struct:TaskData::Settings
+sign	consts.h	17;"	macro
+size	main.c	20;"	member	struct:uartState	file:
+start	modules.h	8;"	member	struct:SystemTask
+start	pwmmodule.c	14;"	member	struct:PinTask	file:
+start	pwmmodule.c	21;"	member	struct:PwmTask	file:
+startTicks	pwmmodule.c	33;"	member	struct:PWMdata	file:
+sysTask	modules.h	32;"	member	union:TaskData	typeref:struct:TaskData::SystemTask
+taskHigh	consts105c6.h	4;"	macro
+taskHigh	consts105k4-карась.h	4;"	macro
+ticks	main.c	10;"	variable
+ticksByte	pwmmodule.c	39;"	variable
+type	modules.h	5;"	member	struct:SystemTask
+type	pwmmodule.c	11;"	member	struct:PinTask	file:
+type	pwmmodule.c	18;"	member	struct:PwmTask	file:
+uartDataBuf	main.c	16;"	variable	typeref:struct:UartData
+uartSend	main.c	167;"	prototype	file:	signature:(void)
+uartSend	main.c	287;"	function	signature:(void)
+uartState	main.c	18;"	struct	file:
+urState	main.c	22;"	variable	typeref:struct:uartState
+uwState	main.c	22;"	variable	typeref:struct:uartState
+value	pwmmodule.c	13;"	member	struct:PinTask	file:
+value	pwmmodule.c	31;"	member	struct:PWMdata	file:
+x4000	main.c	4;"	variable	typeref:struct:sysSettings
+x4000	main.c	5;"	variable	typeref:union:EEPROM

@@ -1,0 +1,47 @@
+No errors on assembly of '..\_asm\mapping.asm'
+No errors on assembly of '..\_asm\mapping.asm'
+No errors on assembly of '..\_asm\mapping.asm'
+No errors on assembly of '..\_asm\functions.asm'
+No errors on assembly of '..\_asm\functions.asm'
+No errors on assembly of '..\_asm\stm8s105c_s.asm'
+No errors on assembly of '..\_asm\stm8s105c_s.asm'
+No errors on assembly of '..\_asm\mapping.asm'
+No errors on assembly of '..\_asm\mapping.asm'
+No errors on assembly of '..\_asm\functions.asm'
+No errors on assembly of '..\_asm\functions.asm'
+No errors on assembly of '..\_asm\stm8s105c_s.asm'
+No errors on assembly of '..\_asm\stm8s105c_s.asm'
+No errors on assembly of 'c:\_wm\stm\_asm\mapping.asm'
+No errors on assembly of 'c:\_wm\stm\_asm\mapping.asm'
+
+c:\_wm\stm\_asm\uart.asm(9): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+
+c:\_wm\stm\_asm\uart.asm(9): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+
+c:\_wm\stm\_asm\uart.asm(9): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+
+c:\_wm\stm\_asm\uart.asm(9): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+
+c:\_wm\stm\_asm\uart.asm(8): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+
+c:\_wm\stm\_asm\uart.asm(8): as1 : Fatal 4: Illegal Source EOF 'EOF'
+
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
+c:\_wm\stm\_asm\uart.asm(6): as1 : Warning 90: No argument after dc.w 'readDataBuf.w dc.w'
+No errors on assembly of 'c:\_wm\stm\_asm\uart.asm'
