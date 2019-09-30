@@ -15,12 +15,12 @@
         XRoutingObject=40
         /*XRouting object addressed
 
-         Для пакетов XRT кроме REDIRECT, FORWARD
-         #11-19(except 17,18) #dstAddr1 #dstAddr2 #srcAddr1 #srcAddr2 #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
+         Для пакетов XRT кроме THINGS, REDIRECT, FORWARD
+         #11-18(except 17,18) #dstAddr1 #dstAddr2 #srcAddr1 #srcAddr2 #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
          Где x - тип пакета #xrt
 
-         Для пакетов REDIRECT, FORWARD
-         #17-18 #dstLocalAddr #srcLocalAddr #identifier #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
+         Для пакетов THINGS, REDIRECT, FORWARD
+         #14,16-17 #dstLocalAddr #srcLocalAddr #identifier #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
 
          Для пакетов #SYNC
          #A0-#CF - зарезервировано
@@ -29,23 +29,27 @@
 
          */
 
-           /*pm = packet marker ( 3bit - dataType + 5bit dictionary num )
+           /*pm = packet marker ( 3bit - dataType + 5bit thing identifier )
               pm data types:
-              0 - Raw Data, for a strings or something encoded
-              1 - Sized    something have fixed size
-              2 - #pms Complex start  with another PM's insize
-              3 - #pme Complex End
+
+              00 - Raw Data, for a strings or something encoded, looking the next PM
+              01 - Sized    something have fixed size, things identifier describe size
+              10 - #pms Complex start with another PM's
+              11 - #pme Complex End
+
 
             */
            /*
             XRT packet type:
 
-            1 Hi (Subscribe),
+            1 Hi (Subscribe)
             2 Buy (Unscribe)
             3 SeeYou (Accepted)
+            4 Things (List)
             5 Lookup (Get Description)
-            7 Redirect (Emit)
-            8 Forward  (Emit)
-            9 Tunnel
+            6 Redirect (Emit)
+            7 Forward  (Emit)
+            8 Tunnel
+
             */
 }
