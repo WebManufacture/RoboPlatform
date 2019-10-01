@@ -15,15 +15,19 @@
         XRoutingObject=40
         /*XRouting object addressed
 
-         Для пакетов XRT кроме THINGS, REDIRECT, FORWARD
-         #11-18(except 17,18) #dstAddr1 #dstAddr2 #srcAddr1 #srcAddr2 #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
-         Где x - тип пакета #xrt
+         #11-18(1x) #dstAddr ...,  #srcAddr..., #size, #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, (#crc) ? #03
+         x - XRT packet type
 
-         Для пакетов THINGS, REDIRECT, FORWARD
-         #14,16-17 #dstLocalAddr #srcLocalAddr #identifier #size #pmo,#pm, #value,...,#pms, #pm, value..., #pme, #pme, #03
+         #addr (#dstAddr, #srcAddr)
+         First 1bits of address means this is end of address chain
+         0 - packet chain
+         1 - end packet
+         Special bytes in packet chain may have sense -- delimeter, mark of the address type
 
          Для пакетов #SYNC
-         #A0-#CF - зарезервировано
+         #A0-#A9 - #Req
+         #B0-#B9 - #Ack
+         #C0-#C9 - Reserved
          #E0-#EF #syncData1 #syncData2
          #F0-FF #syncData (1Byte)
 
@@ -42,13 +46,13 @@
            /*
             XRT packet type:
 
-            1 Hi (Subscribe)
-            2 Buy (Unscribe)
-            3 SeeYou (Accepted)
-            4 Things (List)
-            5 Lookup (Get Description)
-            6 Redirect (Emit)
-            7 Forward  (Emit)
+            1 Hi (Hi, when raise node)
+            2 Dying (Something wrong, buy or error, Unscribe, Del)
+            3 Acknowledge (Response, for anything, for example "see you as")
+            4 Things (Get Description, Get anything, Add, Set)
+            5 Lookup (All, Subscribe)
+            6 Redirect (Info)
+            7 Forward  (Note)
             8 Tunnel
 
             */
